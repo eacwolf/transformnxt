@@ -36,8 +36,8 @@ const Footer = () => (
       {/* Contact & Social */}
       <div className="flex flex-col md:flex-row justify-between items-center py-6 text-sm border-b border-gray-200">
         <div className="flex items-center gap-4 mb-2 md:mb-0">
-          <span className="flex items-center gap-2"><Phone className="w-4 h-4" /> +91 9910367855</span>
-          <span className="flex items-center gap-2"><Mail className="w-4 h-4" /> support@transformnxt.in</span>
+          <span className="flex items-center gap-2"><Phone className="w-4 h-4" /> +91000000000000</span>
+          <span className="flex items-center gap-2"><Mail className="w-4 h-4" /> akhil@transformnxt.in</span>
         </div>
         <div className="flex gap-4">
           <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-900"><Linkedin className="w-5 h-5" /></a>

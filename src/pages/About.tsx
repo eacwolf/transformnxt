@@ -2,20 +2,20 @@
 
 const leadership = [
   {
-    name: "Murali Kumar B",
-    title: "Director, GGP, University of Texas",
+    name: "xx",
+    title: "xxxx",
   },
   {
-    name: "Raajaguru Mylsamy",
-    title: "Director, MBA, IIM Ahmedabad",
+    name: "xxxx",
+    title: "xxxx",
   },
   {
-    name: "Karthik R",
-    title: "Director, GGP, University of Texas",
+    name: "xxxxik R",
+    title: "xxxxs",
   },
   {
-    name: "T T BHAT",
-    title: "Advisory Director, BGL, University of Bangalore",
+    name: "xxxx",
+    title: "xxxx",
   },
 ];
 
@@ -25,7 +25,7 @@ const About = () => (
     <section className="max-w-5xl w-full text-center mb-20">
       <h1 className="text-5xl font-extrabold mb-4 text-gray-900">About Us</h1>
       <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-        At <span className="font-semibold text-gray-900">Innoboon Technologies</span>, we empower businesses to achieve transformative growth through cutting-edge Generative AI and next-generation digital solutions. 
+        At <span className="font-semibold text-gray-900">TransformNXT</span>, we empower businesses to achieve transformative growth through cutting-edge Generative AI and next-generation digital solutions. 
         We specialize in Consulting, Proof-of-Concept development, AI Systems Integration, and Cloud-based Data Engineering.
       </p>
     </section>
@@ -79,10 +79,10 @@ const About = () => (
       <h2 className="text-3xl font-bold mb-6 text-gray-900">Contact Us</h2>
       <div className="bg-white rounded-2xl shadow-md p-8">
         <p className="text-gray-700 mb-2">
-          4th Floor, DC 23, TIDEL Park, ELCOT SEZ, Aerodrome Post, Coimbatore - 641 014
+          NO 6/1451 kk nagar 2nd street kr palayam erode 638316,tamilnadu
         </p>
-        <p className="text-gray-700 mb-2">info@innoboon.com</p>
-        <p className="text-gray-700 mb-2">+91 96010 93817</p>
+        <p className="text-gray-700 mb-2">akhil@transformnxt.in</p>
+        <p className="text-gray-700 mb-2">+xxxxxxx</p>
       </div>
     </section>
   </div>
