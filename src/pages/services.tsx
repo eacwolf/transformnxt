@@ -17,12 +17,13 @@ const services = [
   }
 ]
 
+import PageContainer from '../components/PageContainer';
+
 const Services = () => {
   return (
-    <div className="w-full min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 py-16 px-6 md:px-12 mt-24">
+    <PageContainer>
       <div className="max-w-[1200px] mx-auto">
-        <header className="mb-12 text-center">
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-4">Services</h1>
+        <header className="mb-8 text-center">
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">We partner with enterprises and startups to design, build and scale digital products and capability using data, cloud and AI.</p>
         </header>
 
@@ -74,12 +75,12 @@ const Services = () => {
         </section>
 
         <section className="mb-24 text-center">
-          <h2 className="text-2xl font-bold mb-4">Ready to transform?</h2>
+          <h3 className="text-xl font-semibold mb-4">Ready to transform?</h3>
           <p className="text-gray-700 mb-6">Let's discuss how we can help you modernize, scale, and innovate.</p>
           <a href="/contact" className="inline-block px-8 py-4 bg-black text-white rounded-xl font-semibold">Get in touch</a>
         </section>
       </div>
-    </div>
+    </PageContainer>
   )
 }
 
