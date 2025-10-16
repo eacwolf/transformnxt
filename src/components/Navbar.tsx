@@ -1,4 +1,3 @@
-
 import { NavLink } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
@@ -33,23 +32,20 @@ function Navbar() {
                 <span className={isActive ? "flex items-center text-zinc-900 font-semibold border-b-2 border-zinc-900 pb-1 h-full" : "flex items-center text-zinc-900 font-medium hover:text-zinc-900/80 transition-colors pb-1 h-full"}>Services</span>
               )}
             </NavLink>
+            {/* Company Dropdown - not a clickable link, just a dropdown trigger */}
             <div
               className="relative"
               onMouseEnter={() => setDropdownOpen(true)}
               onMouseLeave={() => setDropdownOpen(false)}
             >
-              <NavLink to="/company">
-                {({ isActive }) => (
-                  <span className={isActive ? "text-zinc-900 font-semibold border-b-2 border-zinc-900 pb-1 cursor-pointer flex items-center gap-1" : "text-zinc-900 font-medium hover:text-zinc-900/80 transition-colors pb-1 cursor-pointer flex items-center gap-1"}>
-                    <span className="inline-flex items-center gap-2 align-middle">
-                      Company
-                      <span className="flex items-center" style={{ marginTop: '2px' }}>
-                        <svg className="w-5 h-5" style={{ transform: dropdownOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.3s' }} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
-                      </span>
-                    </span>
+              <span className={dropdownOpen ? "text-zinc-900 font-semibold border-b-2 border-zinc-900 pb-1 cursor-pointer flex items-center gap-1" : "text-zinc-900 font-medium hover:text-zinc-900/80 transition-colors pb-1 cursor-pointer flex items-center gap-1"}>
+                <span className="inline-flex items-center gap-2 align-middle">
+                  Company
+                  <span className="flex items-center" style={{ marginTop: '2px' }}>
+                    <svg className="w-5 h-5" style={{ transform: dropdownOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.3s' }} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
                   </span>
-                )}
-              </NavLink>
+                </span>
+              </span>
               {/* Dropdown menu with extra gap for easier access */}
               <div style={{ minHeight: '12px' }} />
               {dropdownOpen && (

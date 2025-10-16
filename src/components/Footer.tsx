@@ -9,7 +9,7 @@ const Footer = () => (
         <div className="flex flex-col items-center md:items-start text-center md:text-left col-span-1">
           <img src="/assets/logo/transform-logo.png" alt="TransformNXT Logo" className="h-20 mb-4" />
           <p className="text-base max-w-md mb-0">
-            TransformNXT is your partner for business transformation, consulting, and talent solutions. We help organizations thrive in a fast-evolving landscape with tailored strategies and relentless support.
+            TransformNXT is your trusted IT partner for digital transformation, software development, cloud solutions, and technology consulting. We empower businesses to innovate and grow with cutting-edge IT services and expert support.
           </p>
         </div>
         {/* Quick Links */}
@@ -23,20 +23,20 @@ const Footer = () => (
             <li><a href="/get-plan" className="hover:text-zinc-900">Get Your Plan</a></li>
           </ul>
         </div>
-        {/* Explore */}
+        {/* Explore - IT relevant */}
         <div className="flex flex-col items-center md:items-start col-span-1">
           <h3 className="text-zinc-900 font-semibold text-lg mb-3">EXPLORE</h3>
           <ul className="space-y-2 text-base">
-            <li><a href="/programs" className="hover:text-zinc-900">Nutrition & Fitness Programs</a></li>
-            <li><a href="/corporate-wellness" className="hover:text-zinc-900">Corporate Wellness Programs</a></li>
-            <li><a href="/videos" className="hover:text-zinc-900">Exercise Videos</a></li>
+            <li><a href="/projects" className="hover:text-zinc-900">Our Projects</a></li>
+            <li><a href="/case-studies" className="hover:text-zinc-900">Case Studies</a></li>
+            <li><a href="/blog" className="hover:text-zinc-900">Tech Blog</a></li>
           </ul>
         </div>
       </div>
       {/* Contact & Social */}
       <div className="flex flex-col md:flex-row justify-between items-center py-6 text-sm border-b border-gray-200">
         <div className="flex items-center gap-4 mb-2 md:mb-0">
-          <span className="flex items-center gap-2"><Phone className="w-4 h-4" /> +91000000000000</span>
+          <span className="flex items-center gap-2"><Phone className="w-4 h-4" /> 000000000</span>
           <span className="flex items-center gap-2"><Mail className="w-4 h-4" /> akhil@transformnxt.in</span>
         </div>
         <div className="flex gap-4">

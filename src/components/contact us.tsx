@@ -14,7 +14,7 @@ export default function Contact() {
           <h1 className="display-5 fw-bold">Get in Touch with TransformNXT</h1>
           <p className="lead mt-3">
             We’d love to hear from you. Whether you have a project idea,
-            partnership inquiry, or just want to say hello — let’s connect.
+            partnership inquiry, or just want to say hello , let’s connect.
           </p>
         </div>
       </section>
