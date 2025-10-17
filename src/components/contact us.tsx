@@ -3,7 +3,7 @@ import React from "react";
 export default function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert("✅ Thanks for contacting us! (Demo only)");
+    alert("✅ Thanks for contacting us!");
   };
 
   return (
