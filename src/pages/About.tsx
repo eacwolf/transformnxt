@@ -2,56 +2,77 @@ import PageContainer from "../components/PageContainer";
 
 const About = () => (
   <PageContainer>
-    <div className="space-y-12">
-      <section className="text-center">
-        <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-2xl mx-auto">
+    <div className="max-w-4xl mx-auto space-y-16">
+      <section>
+        <h1 className="text-3xl md:text-4xl font-bold mb-6 text-center">About TransformNXT</h1>
+        <p className="text-lg md:text-xl text-gray-800 leading-relaxed">
           <span className="font-semibold text-gray-900">
             Digi Transformnxt Pvt Ltd
           </span>{" "}
-          is a next-generation IT solutions provider, specializing in digital
-          transformation, software development, cloud, and AI-driven consulting.
-          We help businesses innovate, scale, and succeed in a rapidly evolving
-          digital world.
+          is a next-generation IT solutions provider at the forefront of digital innovation. 
+          We specialize in transforming businesses through cutting-edge technology solutions, 
+          custom software development, and strategic consulting services. Our commitment to 
+          excellence and innovation helps organizations thrive in today's rapidly evolving 
+          digital landscape.
         </p>
       </section>
 
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="bg-white rounded-2xl shadow-md p-8">
-          <h3 className="text-xl font-semibold mb-3">Mission</h3>
-          <p className="text-gray-700">
-            To deliver innovative, secure, and scalable IT solutions that
-            empower organizations to achieve their business goals and drive
-            digital transformation.
+      <section>
+        <h2 className="text-2xl font-extrabold mb-3 text-gray-900 border-b-4 border-blue-500 inline-block pb-1">Why Choose Us</h2>
+        <div className="space-y-6 text-gray-800">
+          <p>
+            We bring a unique combination of deep technical expertise and business acumen to every engagement. 
+            Our team of experienced professionals works closely with clients to understand their specific needs 
+            and deliver tailored solutions that drive real business value.
+          </p>
+          <ul className="space-y-4 ml-6">
+            <li className="flex items-start gap-3">
+              <span className="text-blue-600 font-bold">•</span>
+              <span><strong>Innovation Focus:</strong> We stay ahead of technology trends to bring you cutting-edge solutions</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-blue-600 font-bold">•</span>
+              <span><strong>Expert Team:</strong> Seasoned professionals with deep industry knowledge</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-blue-600 font-bold">•</span>
+              <span><strong>Client-Centric:</strong> Your success is our priority - we align our solutions with your goals</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-extrabold mb-3 text-gray-900 border-b-4 border-blue-500 inline-block pb-1">Our Mission</h2>
+        <p className="text-gray-800">
+          To deliver innovative, secure, and scalable IT solutions that empower organizations 
+          to achieve their business goals and drive digital transformation. We are committed to 
+          helping our clients stay ahead in an increasingly competitive digital landscape.
+        </p>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-extrabold mb-3 text-gray-900 border-b-4 border-blue-500 inline-block pb-1">Our Vision</h2>
+        <p className="text-gray-800">
+          To be a global leader in technology consulting, enabling businesses to thrive through 
+          intelligent digital solutions and emerging technologies. We aim to be the catalyst for 
+          digital innovation and transformation across industries.
+        </p>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-extrabold mb-3 text-gray-900 border-b-4 border-blue-500 inline-block pb-1">Get in Touch</h2>
+        <div className="space-y-2">
+          <p className="text-gray-800 font-semibold">Digi Transformnxt Pvt Ltd</p>
+          <p className="text-gray-800">
+            No 6/1451 KK Nagar 2nd Street, KR Palayam<br />
+            Erode 638316, Tamilnadu
+          </p>
+          <p className="text-gray-800">
+            <strong>Email:</strong> akhil@transformnxt.in<br />
+            <strong>Phone:</strong> 000000000
           </p>
         </div>
-        <div className="bg-white rounded-2xl shadow-md p-8">
-          <h3 className="text-xl font-semibold mb-3">Vision</h3>
-          <p className="text-gray-700">
-            To be a global leader in technology consulting, enabling businesses
-            to thrive through the intelligent use of digital solutions and
-            emerging technologies.
-          </p>
-        </div>
-      </section>
-
-      <section className="bg-white rounded-2xl shadow-md p-8">
-        <h3 className="text-xl font-semibold mb-3">What We Do</h3>
-        <p className="text-gray-700">
-          We offer end-to-end IT consulting, custom software development, cloud
-          migration, AI/ML solutions, and digital strategy. Our team partners
-          with clients to deliver robust, future-ready technology that
-          accelerates business growth and operational excellence.
-        </p>
-      </section>
-
-      <section className="bg-white rounded-2xl shadow-md p-8">
-        <h3 className="text-xl font-semibold mb-3">Contact</h3>
-        <p className="text-gray-700 mb-1">Digi Transformnxt Pvt Ltd</p>
-        <p className="text-gray-700 mb-1">
-          No 6/1451 KK Nagar 2nd Street, KR Palayam, Erode 638316, Tamilnadu
-        </p>
-        <p className="text-gray-700 mb-1">akhil@transformnxt.in</p>
-        <p className="text-gray-700 mb-1">000000000</p>
       </section>
     </div>
   </PageContainer>
