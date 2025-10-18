@@ -20,9 +20,9 @@ function Navbar() {
           />
         </NavLink>
         {/* Desktop Nav */}
-        <div className="hidden md:flex flex-1 justify-center items-center">
-          <div className="flex gap-10 relative items-center h-16">
-            <NavLink to="/" end>
+        <div className="hidden md:flex flex-1 justify-center">
+          <div className="flex gap-8 items-center h-16">
+            <NavLink to="/" end className="h-full flex items-center">
               {({ isActive }) => (
                 <span
                   className={
@@ -35,7 +35,7 @@ function Navbar() {
                 </span>
               )}
             </NavLink>
-            <NavLink to="/about">
+            <NavLink to="/about" className="h-full flex items-center">
               {({ isActive }) => (
                 <span
                   className={
@@ -48,7 +48,7 @@ function Navbar() {
                 </span>
               )}
             </NavLink>
-            <NavLink to="/services">
+            <NavLink to="/services" className="h-full flex items-center">
               {({ isActive }) => (
                 <span
                   className={
@@ -74,14 +74,15 @@ function Navbar() {
                 onClick={() => setDropdownOpen((o) => !o)}
                 className={
                   dropdownOpen
-                    ? "flex items-center h-full text-zinc-900 font-semibold border-b-2 border-zinc-900 pb-1 px-0 gap-2"
-                    : "flex items-center h-full text-zinc-900 font-medium hover:text-zinc-900/80 transition-colors pb-1 px-0 gap-2"
+                    ? "flex items-center h-full text-zinc-900 font-semibold border-b-2 border-zinc-900 pb-1"
+                    : "flex items-center h-full text-zinc-900 font-medium hover:text-zinc-900/80 transition-colors pb-1"
                 }
+                style={{ transform: 'translateY(6px)' }}
               >
-                <span className="inline-flex items-center gap-2">
+                <span className="inline-flex items-center">
                   Company
                   <svg
-                    className="w-5 h-5 transition-transform"
+                    className="w-5 h-5 ml-1.5 -mt-px transition-transform"
                     style={{
                       transform: dropdownOpen
                         ? "rotate(180deg)"
@@ -138,14 +139,14 @@ function Navbar() {
           </div>
         </div>
         {/* Contact Button */}
-        <div className="hidden md:flex ml-8">
+        <div className="hidden md:flex items-center ml-8">
           <NavLink to="/contact">
             {({ isActive }) => (
               <span
                 className={
                   isActive
-                    ? "px-6 py-2 rounded-full font-semibold text-white bg-zinc-900 shadow-lg"
-                    : "px-6 py-2 rounded-full font-medium text-zinc-900 border border-zinc-900 hover:bg-zinc-900 hover:text-white transition-all duration-200"
+                    ? "inline-flex items-center px-6 py-2 rounded-full font-semibold text-white bg-zinc-900 shadow-lg"
+                    : "inline-flex items-center px-6 py-2 rounded-full font-medium text-zinc-900 border border-zinc-900 hover:bg-zinc-900 hover:text-white transition-all duration-200"
                 }
               >
                 Contact Us
