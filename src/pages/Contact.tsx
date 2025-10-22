@@ -58,152 +58,94 @@ export default function Contact() {
 
   return (
     <div className="w-full min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 mt-24">
-      {/* Hero Section with margin from navbar */}
-      <section className="bg-zinc-900 text-white text-center py-16">
+      {/* Hero Section */}
+      <section className="bg-zinc-900 text-white text-center py-14">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact TransformNXT IT Solutions</h1>
-          <p className="text-xl opacity-90">
-            Reach out for IT consulting, digital transformation, software development, or any technology needs. Our team is ready to help your business grow with innovative IT solutions.
-          </p>
+          <h1 className="text-3xl md:text-4xl font-bold mb-2">Contact TransformNXT</h1>
+          <p className="text-md md:text-lg opacity-90 max-w-2xl mx-auto">Get in touch for IT consulting, cloud strategy, software development, AI/ML solutions, or talent programs. We'll respond within 1 business day.</p>
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* Main contact area */}
       <section className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Contact Form */}
-          <div>
-            <div className="bg-white rounded-2xl shadow-lg p-8">
-              <h2 className="text-2xl font-bold mb-6">Send us a Message</h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Name *
-                  </label>
-                  <input
-                    type="text"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Your full name"
-                    required
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Email *
-                  </label>
-                  <input
-                    type="email"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="your@email.com"
-                    required
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Message *
-                  </label>
-                  <textarea
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    rows={4}
-                    placeholder="How can we help?"
-                    required
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  ></textarea>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          {/* Form card */}
+          <div className="animate-fade-in-up">
+            <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
+              <h2 className="text-2xl font-bold mb-4">Send us a message</h2>
+              <p className="text-gray-600 mb-6">Tell us about your project or the help you need — include a brief description, timelines, and budgets if available.</p>
+
+              <form onSubmit={handleSubmit} className="space-y-5" aria-label="Contact form">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Company
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Your company name"
-                      value={formData.company}
-                      onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                    />
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Full name *</label>
+                    <input id="name" name="name" type="text" required value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} placeholder="Your full name" className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500" />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Phone
-                    </label>
-                    <input
-                      type="tel"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Your phone number"
-                      value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    />
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email address *</label>
+                    <input id="email" name="email" type="email" required value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} placeholder="you@company.com" className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500" />
                   </div>
                 </div>
-                <button
-                  type="submit"
-                  disabled={status === 'submitting'}
-                  className={`w-full py-3 px-6 rounded-xl text-white font-semibold ${
-                    status === 'submitting'
-                      ? 'bg-gray-400'
-                      : 'bg-black hover:bg-gray-800'
-                  } transition-colors`}
-                >
-                  {status === 'submitting' ? 'Sending...' : 'Send Message'}
-                </button>
+
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message *</label>
+                  <textarea id="message" name="message" required rows={6} value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} placeholder="How can we help?" className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500" />
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">Company</label>
+                    <input id="company" name="company" type="text" value={formData.company} onChange={(e) => setFormData({ ...formData, company: e.target.value })} placeholder="Company name" className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500" />
+                  </div>
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+                    <input id="phone" name="phone" type="tel" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} placeholder="+91 98765 43210" className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500" />
+                  </div>
+                </div>
+
+                <div>
+                  <button type="submit" disabled={status === 'submitting'} className={`w-full inline-flex items-center justify-center gap-3 py-3 px-5 rounded-lg text-white font-semibold ${status === 'submitting' ? 'bg-gray-400' : 'bg-black hover:bg-gray-800'} transition-colors`}>
+                    {status === 'submitting' ? 'Sending...' : 'Send Message'}
+                  </button>
+                </div>
 
                 {status === 'success' && (
-                  <div className="mt-4 p-4 bg-green-50 text-green-700 rounded-lg">
-                    Thank you! Your message has been sent successfully.
+                  <div role="status" className="mt-4 p-4 bg-green-50 text-green-700 rounded-lg">
+                    Thank you — we received your message and will respond shortly.
                   </div>
                 )}
 
                 {status === 'error' && (
-                  <div className="mt-4 p-4 bg-red-50 text-red-700 rounded-lg">
-                    Sorry, there was an error sending your message. Please try again.
+                  <div role="alert" className="mt-4 p-4 bg-red-50 text-red-700 rounded-lg">
+                    Oops — something went wrong. Please try again or email us directly at <a href="mailto:akhil@transformnxt.in" className="underline">akhil@transformnxt.in</a>.
                   </div>
                 )}
               </form>
             </div>
           </div>
 
-          {/* Contact Info */}
-          <div className="space-y-6">
+          {/* Contact details + hours */}
+          <aside className="space-y-6 animate-fade-in-up animate-fade-in-up-delay-1">
             <div className="bg-white rounded-xl p-6 shadow-lg">
-              <h2 className="text-2xl font-bold mb-4">Contact Information</h2>
-              <div className="space-y-4">
-                <div>
-                  <h3 className="font-semibold text-lg mb-2">Company Name</h3>
-                  <p className="text-gray-700">Digi Transformnxt Pvt Ltd</p>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-lg mb-2">Corporate Identification Number (CIN)</h3>
-                  <p className="text-gray-700">U70200TN2025PTC183135</p>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-lg mb-2">Address</h3>
-                  <p className="text-gray-700">No 6/1451 KK Nagar 2nd Street KR Palayam Erode 638316, Tamilnadu.</p>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-lg mb-2">Email</h3>
-                  <p className="text-gray-700">
-                    <a href="mailto:akhil@transformnxt.in" className="hover:underline">akhil@transformnxt.in</a>
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-lg mb-2">Phone</h3>
-                  <p className="text-gray-700">
-                    <a href="tel:000000000" className="hover:underline">000000000</a>
-                  </p>
-                </div>
-              </div>
+              <h3 className="text-xl font-semibold mb-3">Contact information</h3>
+              <p className="text-gray-700 mb-3">Digi Transformnxt Pvt Ltd<br />No 6/1451 KK Nagar 2nd Street, KR Palayam<br />Erode 638316, Tamilnadu</p>
+              <p className="text-gray-700"><strong>Email:</strong> <a href="mailto:akhil@transformnxt.in" className="underline">akhil@transformnxt.in</a></p>
+              <p className="text-gray-700"><strong>Phone:</strong> <a href="tel:000000000" className="underline">000000000</a></p>
             </div>
-            {/* You can add more IT-related info or social links here if needed */}
-          </div>
-        </div>
 
-        {/* No map, clean layout as innoboon.com */}
+            <div className="bg-white rounded-xl p-6 shadow-lg">
+              <h3 className="text-xl font-semibold mb-3">Corporate details</h3>
+              <p className="text-gray-700 mb-2"><strong>CIN:</strong> U70200TN2025PTC183135</p>
+              <p className="text-gray-700 mb-2"><strong>Office hours:</strong> Mon–Fri, 9:00am–6:00pm IST</p>
+              <p className="text-gray-700"><strong>Response time:</strong> Typical reply within 1 business day</p>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 shadow-lg">
+              <h3 className="text-xl font-semibold mb-3">Security & privacy</h3>
+              <p className="text-gray-700">We treat your information securely. Messages are used solely to respond to inquiries and may be attached to internal troubleshooting tickets when needed.</p>
+            </div>
+          </aside>
+        </div>
       </section>
     </div>
   );

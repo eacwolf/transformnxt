@@ -35,9 +35,9 @@ const Services = () => {
 
         <section className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {services.map((s) => (
-            <article key={s.title} className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+            <article key={s.title} className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col animate-fade-in-up">
               <div className="h-44 md:h-56 w-full relative">
-                <img src={s.img} alt={s.title} className="w-full h-full object-cover brightness-90" />
+                <img loading="lazy" src={s.img} alt={s.title} className="w-full h-full object-cover brightness-90 transition-opacity duration-500" />
               </div>
               <div className="p-6 flex-1 flex flex-col">
                 <h3 className="text-xl font-bold mb-2">{s.title}</h3>
@@ -55,27 +55,27 @@ const Services = () => {
               <p className="text-gray-700 mb-6">We combine product thinking, data science, and engineering excellence to deliver measurable business outcomes. Our approach emphasizes:</p>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-600">•</span>
+                  <span className="text-zinc-900">•</span>
                   <span>Rapid Innovation & Validation</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-600">•</span>
+                  <span className="text-zinc-900">•</span>
                   <span>Cloud & Platform Engineering</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-600">•</span>
+                  <span className="text-zinc-900">•</span>
                   <span>AI & Advanced Analytics</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-600">•</span>
+                  <span className="text-zinc-900">•</span>
                   <span>Managed IT Services</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-600">•</span>
+                  <span className="text-zinc-900">•</span>
                   <span>Digital Transformation</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-600">•</span>
+                  <span className="text-zinc-900">•</span>
                   <span>Security & Compliance</span>
                 </li>
               </ul>

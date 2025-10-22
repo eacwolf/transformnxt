@@ -4,7 +4,7 @@ import PageContainer from '../components/PageContainer';
 
 const CaseStudies = () => (
   <PageContainer>
-    <div className="space-y-8">
+    <div className="space-y-8 animate-fade-in-up">
       <div className="text-center">
         <p className="text-lg text-gray-600 max-w-3xl mx-auto">Explore how Digi Transformnxt has helped clients achieve digital transformation and business success through innovative IT solutions.</p>
       </div>

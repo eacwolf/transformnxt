@@ -4,7 +4,7 @@ import PageContainer from '../components/PageContainer';
 
 const Careers = () => (
   <PageContainer>
-    <div className="space-y-8">
+    <div className="space-y-8 animate-fade-in-up">
       <div className="text-center">
         <p className="text-lg text-gray-600 max-w-3xl mx-auto">Join our team of passionate IT professionals and help shape the future of digital transformation. We value innovation, collaboration, and continuous learning.</p>
       </div>

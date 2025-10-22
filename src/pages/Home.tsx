@@ -1,21 +1,21 @@
 const Home = () => {
   return (
     <>
-      <div className="container mx-auto max-w-[1400px] px-4 py-16 mt-0 md:mt-24">
+      <div className="container mx-auto max-w-[1400px] px-4 py-12 mt-6 md:mt-12">
         <div className="relative rounded-3xl shadow-xl overflow-hidden">
           {/* Gradient background */}
           <div className="absolute inset-0 bg-gradient-to-br from-blue-100 via-white to-green-100 opacity-90" />
           <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center p-8 md:p-16">
             {/* Logo on the left */}
-            <div className="flex items-center justify-center md:justify-start h-full w-full">
+            <div className="flex items-center justify-center md:justify-start h-full w-full animate-fade-in-up animate-fade-in-up-delay-1">
               <img
                 src="/assets/logo/transform-logo.png"
                 alt="TransformNXT Logo"
-                className="w-full h-full object-contain max-h-[800px] md:max-h-[1000px] drop-shadow-xl"
+                className="w-full h-full object-contain max-h-[420px] md:max-h-[560px] drop-shadow-xl subtle-float"
               />
             </div>
             {/* Hero text on the right */}
-            <div className="flex flex-col justify-center h-full w-full">
+            <div className="flex flex-col justify-center h-full w-full animate-fade-in-up animate-fade-in-up-delay-2">
               <p className="text-base md:text-lg text-gray-700 mb-4">
                 We are a comprehensive consulting and talent solutions firm dedicated to helping businesses thrive in today’s fast-evolving landscape.
               </p>
@@ -36,13 +36,13 @@ const Home = () => {
               <div className="mt-8 flex gap-4">
                 <a
                   href="/services"
-                  className="inline-block px-6 py-3 bg-black text-white rounded-lg shadow hover:bg-primary transition-colors font-semibold text-base md:text-lg"
+                  className="inline-block px-6 py-3 bg-black text-white rounded-lg shadow hover:bg-primary transition-colors font-semibold text-base md:text-lg cta-hover"
                 >
                   Explore Services
                 </a>
                 <a
                   href="/contact"
-                  className="inline-block w-[170px] px-6 py-3 bg-white text-black rounded-lg shadow hover:bg-black hover:text-white transition-colors font-semibold text-base md:text-lg border border-black text-center"
+                  className="inline-block w-[170px] px-6 py-3 bg-white text-black rounded-lg shadow hover:bg-black hover:text-white transition-colors font-semibold text-base md:text-lg border border-black text-center hover-lift"
                 >
                   Contact Us
                 </a>
@@ -58,12 +58,12 @@ const Home = () => {
           <p className="text-gray-600 text-center mb-8 max-w-2xl">
             We are proud to collaborate with industry-leading organizations that share our commitment to excellence and innovation.
           </p>
-          <div className="flex flex-wrap justify-center gap-8 md:gap-12">
+          <div className="flex flex-wrap justify-center gap-8 md:gap-12 animate-fade-in-up">
             {/* Example partner logos - replace with real ones as needed */}
-            <img src="https://via.placeholder.com/120x48?text=Partner+1" alt="Partner 1" className="h-12 md:h-16 w-auto object-contain rounded bg-gray-100 shadow hover:grayscale-0 transition duration-300" />
-            <img src="https://via.placeholder.com/120x48?text=Partner+2" alt="Partner 2" className="h-12 md:h-16 w-auto object-contain rounded bg-gray-100 shadow hover:grayscale-0 transition duration-300" />
-            <img src="https://via.placeholder.com/120x48?text=Partner+3" alt="Partner 3" className="h-12 md:h-16 w-auto object-contain rounded bg-gray-100 shadow hover:grayscale-0 transition duration-300" />
-            <img src="https://via.placeholder.com/120x48?text=Partner+4" alt="Partner 4" className="h-12 md:h-16 w-auto object-contain rounded bg-gray-100 shadow hover:grayscale-0 transition duration-300" />
+            <img loading="lazy" src="https://via.placeholder.com/120x48?text=Partner+1" alt="Partner 1" className="h-12 md:h-16 w-auto object-contain rounded bg-gray-100 shadow hover:grayscale-0 transition duration-300" />
+            <img loading="lazy" src="https://via.placeholder.com/120x48?text=Partner+2" alt="Partner 2" className="h-12 md:h-16 w-auto object-contain rounded bg-gray-100 shadow hover:grayscale-0 transition duration-300" />
+            <img loading="lazy" src="https://via.placeholder.com/120x48?text=Partner+3" alt="Partner 3" className="h-12 md:h-16 w-auto object-contain rounded bg-gray-100 shadow hover:grayscale-0 transition duration-300" />
+            <img loading="lazy" src="https://via.placeholder.com/120x48?text=Partner+4" alt="Partner 4" className="h-12 md:h-16 w-auto object-contain rounded bg-gray-100 shadow hover:grayscale-0 transition duration-300" />
           </div>
         </div>
       </section>

@@ -166,121 +166,54 @@ function Navbar() {
       {/* Mobile menu overlay with Company dropdown */}
       {menuOpen && (
         <div className="absolute top-full left-0 w-full bg-white border-b border-zinc-200 shadow-md animate-slideDown z-50">
-          <div className="flex flex-col gap-2 items-center py-4">
+          <div className="flex flex-col gap-0 items-stretch py-4">
             <NavLink to="/" end onClick={() => setMenuOpen(false)}>
               {({ isActive }) => (
-                <span
-                  className={
-                    isActive
-                      ? "text-zinc-900 font-semibold border-b-2 border-zinc-900 pb-1"
-                      : "text-zinc-900 font-medium hover:text-zinc-900/80 transition-colors pb-1"
-                  }
-                >
+                <button className={`text-left w-full px-6 py-3 ${isActive ? 'text-zinc-900 font-semibold border-b-2 border-zinc-900' : 'text-zinc-900 font-medium hover:text-zinc-900/80'}`}>
                   Home
-                </span>
+                </button>
               )}
             </NavLink>
             <NavLink to="/about" onClick={() => setMenuOpen(false)}>
               {({ isActive }) => (
-                <span
-                  className={
-                    isActive
-                      ? "text-zinc-900 font-semibold border-b-2 border-zinc-900 pb-1"
-                      : "text-zinc-900 font-medium hover:text-zinc-900/80 transition-colors pb-1"
-                  }
-                >
+                <button className={`text-left w-full px-6 py-3 ${isActive ? 'text-zinc-900 font-semibold border-b-2 border-zinc-900' : 'text-zinc-900 font-medium hover:text-zinc-900/80'}`}>
                   About Us
-                </span>
+                </button>
               )}
             </NavLink>
             <NavLink to="/services" onClick={() => setMenuOpen(false)}>
               {({ isActive }) => (
-                <span
-                  className={
-                    isActive
-                      ? "text-zinc-900 font-semibold border-b-2 border-zinc-900 pb-1"
-                      : "text-zinc-900 font-medium hover:text-zinc-900/80 transition-colors pb-1"
-                  }
-                >
+                <button className={`text-left w-full px-6 py-3 ${isActive ? 'text-zinc-900 font-semibold border-b-2 border-zinc-900' : 'text-zinc-900 font-medium hover:text-zinc-900/80'}`}>
                   Services
-                </span>
+                </button>
               )}
             </NavLink>
             {/* Company dropdown for mobile */}
-            <div className="w-full flex flex-col items-center">
+            <div className="w-full">
               <button
-                className="w-full flex items-center justify-center gap-2 py-2 text-zinc-900 font-medium focus:outline-none"
+                className={`w-full text-left px-6 py-3 flex items-center justify-between ${dropdownOpen ? 'text-zinc-900 font-semibold' : 'text-zinc-900 font-medium'}`}
                 onClick={() => setDropdownOpen((open) => !open)}
                 aria-expanded={dropdownOpen}
                 aria-controls="mobile-company-dropdown"
               >
-                Company
-                <svg
-                  className={`w-4 h-4 ml-1 transition-transform duration-300 ${
-                    dropdownOpen ? "rotate-180" : ""
-                  }`}
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
+                <span>Company</span>
+                <svg className={`w-4 h-4 ml-1 transition-transform duration-300 ${dropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7"/></svg>
               </button>
               <div
                 id="mobile-company-dropdown"
-                className={`w-full overflow-hidden transition-all duration-300 ${
-                  dropdownOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
-                }`}
-                style={{ background: dropdownOpen ? "#f8f8f8" : "transparent" }}
+                className={`w-full overflow-hidden transition-all duration-300 ${dropdownOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}
+                style={{ background: dropdownOpen ? '#f8f8f8' : 'transparent' }}
               >
-                <NavLink
-                  to="/careers"
-                  className="block px-5 py-3 text-zinc-900 hover:bg-zinc-100 transition-colors"
-                  onClick={() => {
-                    setDropdownOpen(false);
-                    setMenuOpen(false);
-                  }}
-                >
-                  Careers
-                </NavLink>
-                <NavLink
-                  to="/blog"
-                  className="block px-5 py-3 text-zinc-900 hover:bg-zinc-100 transition-colors"
-                  onClick={() => {
-                    setDropdownOpen(false);
-                    setMenuOpen(false);
-                  }}
-                >
-                  Blog
-                </NavLink>
-                <NavLink
-                  to="/case-studies"
-                  className="block px-5 py-3 text-zinc-900 hover:bg-zinc-100 transition-colors"
-                  onClick={() => {
-                    setDropdownOpen(false);
-                    setMenuOpen(false);
-                  }}
-                >
-                  Case Studies
-                </NavLink>
+                <NavLink to="/careers" className="block px-6 py-3 text-zinc-900 hover:bg-zinc-100 transition-colors" onClick={() => { setDropdownOpen(false); setMenuOpen(false); }}>Careers</NavLink>
+                <NavLink to="/blog" className="block px-6 py-3 text-zinc-900 hover:bg-zinc-100 transition-colors" onClick={() => { setDropdownOpen(false); setMenuOpen(false); }}>Blog</NavLink>
+                <NavLink to="/case-studies" className="block px-6 py-3 text-zinc-900 hover:bg-zinc-100 transition-colors" onClick={() => { setDropdownOpen(false); setMenuOpen(false); }}>Case Studies</NavLink>
               </div>
             </div>
             <NavLink to="/contact" onClick={() => setMenuOpen(false)}>
               {({ isActive }) => (
-                <span
-                  className={
-                    isActive
-                      ? "px-6 py-2 rounded-full font-semibold text-white bg-zinc-900 shadow-lg"
-                      : "px-6 py-2 rounded-full font-medium text-zinc-900 border border-zinc-900 hover:bg-zinc-900 hover:text-white transition-all duration-200"
-                  }
-                >
+                <button className={`w-full px-6 py-3 text-left ${isActive ? 'text-white bg-zinc-900 font-semibold rounded-b-lg' : 'text-zinc-900 font-medium'}`}>
                   Contact Us
-                </span>
+                </button>
               )}
             </NavLink>
           </div>

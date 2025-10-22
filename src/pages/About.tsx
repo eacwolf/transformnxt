@@ -17,8 +17,8 @@ const About = () => (
         </p>
       </section>
 
-      <section>
-        <h2 className="text-2xl font-extrabold mb-3 text-gray-900 border-b-4 border-blue-500 inline-block pb-1">Why Choose Us</h2>
+      <section className="animate-fade-in-up">
+        <h2 className="text-2xl font-extrabold mb-3 text-gray-900 border-b-4 border-zinc-900 inline-block pb-1">Why Choose Us</h2>
         <div className="space-y-6 text-gray-800">
           <p>
             We bring a unique combination of deep technical expertise and business acumen to every engagement. 
@@ -27,23 +27,23 @@ const About = () => (
           </p>
           <ul className="space-y-4 ml-6">
             <li className="flex items-start gap-3">
-              <span className="text-blue-600 font-bold">•</span>
+              <span className="text-zinc-900 font-bold">•</span>
               <span><strong>Innovation Focus:</strong> We stay ahead of technology trends to bring you cutting-edge solutions</span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-blue-600 font-bold">•</span>
+              <span className="text-zinc-900 font-bold">•</span>
               <span><strong>Expert Team:</strong> Seasoned professionals with deep industry knowledge</span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-blue-600 font-bold">•</span>
+              <span className="text-zinc-900 font-bold">•</span>
               <span><strong>Client-Centric:</strong> Your success is our priority - we align our solutions with your goals</span>
             </li>
           </ul>
         </div>
       </section>
 
-      <section>
-        <h2 className="text-2xl font-extrabold mb-3 text-gray-900 border-b-4 border-blue-500 inline-block pb-1">Our Mission</h2>
+      <section className="animate-fade-in-up animate-fade-in-up-delay-1">
+        <h2 className="text-2xl font-extrabold mb-3 text-gray-900 border-b-4 border-zinc-900 inline-block pb-1">Our Mission</h2>
         <p className="text-gray-800">
           To deliver innovative, secure, and scalable IT solutions that empower organizations 
           to achieve their business goals and drive digital transformation. We are committed to 
@@ -51,8 +51,8 @@ const About = () => (
         </p>
       </section>
 
-      <section>
-        <h2 className="text-2xl font-extrabold mb-3 text-gray-900 border-b-4 border-blue-500 inline-block pb-1">Our Vision</h2>
+      <section className="animate-fade-in-up animate-fade-in-up-delay-2">
+        <h2 className="text-2xl font-extrabold mb-3 text-gray-900 border-b-4 border-zinc-900 inline-block pb-1">Our Vision</h2>
         <p className="text-gray-800">
           To be a global leader in technology consulting, enabling businesses to thrive through 
           intelligent digital solutions and emerging technologies. We aim to be the catalyst for 
@@ -60,8 +60,8 @@ const About = () => (
         </p>
       </section>
 
-      <section>
-        <h2 className="text-2xl font-extrabold mb-3 text-gray-900 border-b-4 border-blue-500 inline-block pb-1">Get in Touch</h2>
+      <section className="animate-fade-in-up animate-fade-in-up-delay-3">
+        <h2 className="text-2xl font-extrabold mb-3 text-gray-900 border-b-4 border-zinc-900 inline-block pb-1">Get in Touch</h2>
         <div className="space-y-2">
           <p className="text-gray-800 font-semibold">Digi Transformnxt Pvt Ltd</p>
           <p className="text-gray-800">

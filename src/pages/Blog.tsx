@@ -4,7 +4,7 @@ import PageContainer from '../components/PageContainer';
 
 const Blog = () => (
   <PageContainer>
-    <div className="space-y-8">
+    <div className="space-y-8 animate-fade-in-up">
       <div className="text-center">
         <p className="text-lg text-gray-600 max-w-3xl mx-auto">Insights, news, and thought leadership from Digi Transformnxt. Stay updated on the latest in IT, digital transformation, and emerging technologies.</p>
       </div>
