@@ -1,18 +1,18 @@
 
 const services = [
   {
-    title: 'Technology Consulting',
-    desc: 'We help organizations adapt to change and lead it through deep domain expertise and forward-looking innovation. Our services span cloud computing, cybersecurity, and intelligent automation.',
+    title: 'Product Dev Line',
+    desc: 'End-to-end product development: idea validation, prototyping, MVP delivery, and ongoing product engineering to bring SaaS and enterprise products to market quickly and reliably.',
     img: '/assets/images/it-consultancy.jpg'
   },
   {
-    title: 'Management Consulting',
-    desc: 'Strategic roadmaps and operating models to improve performance, reduce costs, and drive sustainable growth through digital transformation and operational excellence.',
+    title: 'IT Managed Services',
+    desc: 'Proactive infrastructure and platform management, cloud operations, monitoring, and secure managed services tailored to minimize downtime and optimize costs.',
     img: '/assets/images/management-consultancy.png'
   },
   {
-    title: 'Talent Acquisition',
-    desc: 'End-to-end hiring and talent solutions to build world-class teams. We help you attract, assess, and retain top talent for your digital initiatives.',
+    title: 'HR Solutions',
+    desc: 'Integrated HR tooling, talent assessment, analytics and ATS enhancements that accelerate hiring, improve quality of hire, and streamline people operations.',
     img: '/assets/images/hr.jpg'
   }
 ]
@@ -23,13 +23,10 @@ const Services = () => {
   return (
     <PageContainer>
       <div className="max-w-[1200px] mx-auto">
-        <header className="mb-12 text-center">
-          <h1 className="text-3xl md:text-4xl font-bold mb-6">Technology Consulting & IT Managed Services</h1>
+          <header className="mb-12 text-center">
+          <h1 className="text-3xl md:text-4xl font-bold mb-6">Product Development • Managed IT • HR Solutions</h1>
           <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
-            We're not just consultants—we're your innovators. With a unique blend of deep domain expertise 
-            and forward-looking innovation, we help organizations not only adapt to change but lead it. 
-            We partner with clients to accelerate digital transformation, enhance operational performance, 
-            and adopt cutting-edge solutions.
+            We deliver product-led engineering, reliable managed services, and people-first HR solutions. Our cross-functional teams combine product strategy, engineering excellence and HR intelligence to create measurable business outcomes.
           </p>
         </header>
 

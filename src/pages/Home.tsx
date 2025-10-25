@@ -1,56 +1,43 @@
 const Home = () => {
   return (
     <>
-      <div className="container mx-auto max-w-[1400px] px-4 py-12 mt-6 md:mt-12">
-        <div className="relative rounded-3xl shadow-xl overflow-hidden">
-          {/* Gradient background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-100 via-white to-green-100 opacity-90" />
-          <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center p-8 md:p-16">
-            {/* Logo on the left */}
-            <div className="flex items-center justify-center md:justify-start h-full w-full animate-fade-in-up animate-fade-in-up-delay-1">
-              <img
-                src="/assets/logo/transform-logo.png"
-                alt="TransformNXT Logo"
-                className="w-full h-full object-contain max-h-[420px] md:max-h-[560px] drop-shadow-xl subtle-float"
+      {/* Animated background section, full viewport height, no hero image */}
+      <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden hero-bg">
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <div className="blob blob-1" />
+          <div className="blob blob-2" />
+          <div className="blob blob-3" />
+          <div className="particles">
+            {Array.from({ length: 15 }).map((_, i) => (
+              <div
+                key={i}
+                className="particle"
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                  '--tx': `${(Math.random() - 0.5) * 200}px`,
+                  '--ty': `${(Math.random() - 0.5) * 200}px`,
+                } as React.CSSProperties}
               />
-            </div>
-            {/* Hero text on the right */}
-            <div className="flex flex-col justify-center h-full w-full animate-fade-in-up animate-fade-in-up-delay-2">
-              <p className="text-base md:text-lg text-gray-700 mb-4">
-                We are a comprehensive consulting and talent solutions firm dedicated to helping businesses thrive in today’s fast-evolving landscape.
-              </p>
-              <ul className="space-y-3 mt-2">
-                <li className="flex items-center gap-2 text-base md:text-lg">
-                  <span className="inline-block w-3 h-3 bg-blue-500 rounded-sm mr-2" style={{ clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)' }}></span>
-                  Technology Consulting
-                </li>
-                <li className="flex items-center gap-2 text-base md:text-lg">
-                  <span className="inline-block w-3 h-3 bg-blue-500 rounded-sm mr-2" style={{ clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)' }}></span>
-                  Management Consulting
-                </li>
-                <li className="flex items-center gap-2 text-base md:text-lg">
-                  <span className="inline-block w-3 h-3 bg-blue-500 rounded-sm mr-2" style={{ clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)' }}></span>
-                  Talent Acquisition &amp; Hiring Solutions
-                </li>
-              </ul>
-              <div className="mt-8 flex gap-4">
-                <a
-                  href="/services"
-                  className="inline-block px-6 py-3 bg-black text-white rounded-lg shadow hover:bg-primary transition-colors font-semibold text-base md:text-lg cta-hover"
-                >
-                  Explore Services
-                </a>
-                <a
-                  href="/contact"
-                  className="inline-block w-[170px] px-6 py-3 bg-white text-black rounded-lg shadow hover:bg-black hover:text-white transition-colors font-semibold text-base md:text-lg border border-black text-center hover-lift"
-                >
-                  Contact Us
-                </a>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
-      </div>
+        <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 max-w-6xl mx-auto">
+          <h1 className="text-4xl md:text-7xl font-black mb-8 tracking-tight text-zinc-900">
+            Transform Your <span className="bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">Hiring Process</span> with AI Technology
+          </h1>
+          <p className="text-lg md:text-2xl text-zinc-700 mb-8 max-w-3xl font-medium">Streamline recruitment with our AI-powered interview platform. Automate screening, enhance candidate experience, and make data-driven hiring decisions.</p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mt-4">
+            <a href="/services" className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gradient-to-r from-blue-600 to-emerald-600 rounded-xl hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+              <span className="mr-2">Get Started</span>
+              <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+            </a>
+            <a href="/contact" className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-gray-900 transition-all duration-200 bg-white border-2 border-gray-900 rounded-xl hover:bg-gray-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900">
+              Schedule Demo
+            </a>
+          </div>
+        </div>
+      </section>
       {/* Partners Section */}
       <section className="container mx-auto max-w-[1400px] px-4 py-16 mt-8">
   <div className="bg-white rounded-2xl p-8 md:p-12 flex flex-col items-center">
