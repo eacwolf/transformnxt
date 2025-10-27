@@ -12,13 +12,19 @@ function Navbar() {
         className="container max-w-[1400px] mx-auto px-8 py-0 flex items-center justify-between gap-8"
         style={{ minHeight: "88px" }}
       >
-        {/* Logo */}
-        <NavLink to="/" className="flex items-center gap-2">
-          <img
-            src="/assets/logo/transform-logo.png"
-            alt="TransformNXT Logo"
-            className="max-h-20 w-auto"
-          />
+        {/* Logo + Title */}
+        <NavLink to="/" className="flex items-center gap-3">
+          <div className="bg-white p-2 rounded-md shadow-sm flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16">
+            <img
+              src="/assets/logo/transform-logo.png"
+              alt="TransformNXT Logo"
+              className="max-h-full max-w-full"
+            />
+          </div>
+          <div className="hidden sm:block">
+            <div className="text-sm text-zinc-700">TransformNXT</div>
+            <div className="text-xs text-zinc-500">IT & Hiring Solutions</div>
+          </div>
         </NavLink>
         {/* Desktop Nav */}
         <div className="hidden md:flex flex-1 justify-center">
@@ -36,19 +42,6 @@ function Navbar() {
                 </span>
               )}
             </NavLink>
-            <NavLink to="/about" className="h-full flex items-center">
-              {({ isActive }) => (
-                <span
-                  className={
-                    isActive
-                      ? "flex items-center text-zinc-900 font-semibold border-b-2 border-zinc-900 pb-1 h-full"
-                      : "flex items-center text-zinc-900 font-medium hover:text-zinc-900/80 transition-colors pb-1 h-full"
-                  }
-                >
-                  About Us
-                </span>
-              )}
-            </NavLink>
             <NavLink to="/services" className="h-full flex items-center">
               {({ isActive }) => (
                 <span
@@ -62,6 +55,28 @@ function Navbar() {
                 </span>
               )}
             </NavLink>
+            {/* Product Dropdown (single instance) - desktop */}
+            <div className="relative" onMouseEnter={() => setProductOpen(true)} onMouseLeave={() => setProductOpen(false)}>
+              <button type="button" className="flex items-center text-zinc-900 font-medium hover:text-zinc-900/80 transition-colors pb-1 h-full" aria-haspopup="true" aria-expanded={productOpen} onClick={() => setProductOpen((o) => !o)} style={{ transform: 'translateY(2px)' }}>
+                <span className="inline-flex items-center gap-2">Products
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                </span>
+              </button>
+              <div style={{ minHeight: '8px' }} />
+              {productOpen && (
+                <div className="absolute left-0 top-full min-w-[220px] bg-white border border-zinc-200 rounded-xl shadow-lg overflow-hidden transition-all duration-200 z-50">
+                  <NavLink to="/products/ai-video-interviewer" className="block px-5 py-3 text-zinc-900 hover:bg-zinc-100">AI Video Interviewer</NavLink>
+                  <NavLink to="/products/ai-audio-interviewer" className="block px-5 py-3 text-zinc-900 hover:bg-zinc-100">AI Audio Interviewer</NavLink>
+                  <NavLink to="/products/ai-async-interviewer" className="block px-5 py-3 text-zinc-900 hover:bg-zinc-100">AI Asynchronous Mode Interviewer</NavLink>
+                  <NavLink to="/products/office-communicator" className="block px-5 py-3 text-zinc-900 hover:bg-zinc-100">AI Office Communicator & Candidate Report Integration</NavLink>
+                  <NavLink to="/products/interview-scheduler" className="block px-5 py-3 text-zinc-900 hover:bg-zinc-100">AI Interview Scheduler</NavLink>
+                  <NavLink to="/products/hr-analytics" className="block px-5 py-3 text-zinc-900 hover:bg-zinc-100">HR Data Driven – Predictive Analytics</NavLink>
+                  <NavLink to="/products/hr-reports" className="block px-5 py-3 text-zinc-900 hover:bg-zinc-100">HR Report’s as SaaS</NavLink>
+                  <NavLink to="/products/ats-cv-ranker" className="block px-5 py-3 text-zinc-900 hover:bg-zinc-100">ATS with CV Ranker</NavLink>
+                  <NavLink to="/products/hrms" className="block px-5 py-3 text-zinc-900 hover:bg-zinc-100">HRMS</NavLink>
+                </div>
+              )}
+            </div>
             <NavLink to="/solutions" className="h-full flex items-center">
               {({ isActive }) => (
                 <span
@@ -88,32 +103,20 @@ function Navbar() {
                 </span>
               )}
             </NavLink>
-            {/* Product Dropdown */}
-            <div className="relative" onMouseEnter={() => setProductOpen(true)} onMouseLeave={() => setProductOpen(false)}>
-              <NavLink to="#" className="h-full flex items-center">
-                 {() => (
-                  <button type="button" className="flex items-center text-zinc-900 font-medium hover:text-zinc-900/80 transition-colors pb-1 h-full" aria-haspopup="true" aria-expanded={productOpen} onClick={() => setProductOpen((o) => !o)} style={{ transform: 'translateY(2px)' }}>
-                    <span className="inline-flex items-center gap-2">Products
-                      <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7"/></svg>
-                    </span>
-                  </button>
-                )}
-              </NavLink>
-              <div style={{ minHeight: '8px' }} />
-              {productOpen && (
-                <div className="absolute left-0 top-full min-w-[220px] bg-white border border-zinc-200 rounded-xl shadow-lg overflow-hidden transition-all duration-200 z-50">
-                  <NavLink to="/products/ai-video-interviewer" className="block px-5 py-3 text-zinc-900 hover:bg-zinc-100">AI Video Interviewer</NavLink>
-                  <NavLink to="/products/ai-audio-interviewer" className="block px-5 py-3 text-zinc-900 hover:bg-zinc-100">AI Audio Interviewer</NavLink>
-                  <NavLink to="/products/ai-async-interviewer" className="block px-5 py-3 text-zinc-900 hover:bg-zinc-100">AI Asynchronous Mode Interviewer</NavLink>
-                  <NavLink to="/products/office-communicator" className="block px-5 py-3 text-zinc-900 hover:bg-zinc-100">AI Office Communicator & Candidate Report Integration</NavLink>
-                  <NavLink to="/products/interview-scheduler" className="block px-5 py-3 text-zinc-900 hover:bg-zinc-100">AI Interview Scheduler</NavLink>
-                  <NavLink to="/products/hr-analytics" className="block px-5 py-3 text-zinc-900 hover:bg-zinc-100">HR Data Driven – Predictive Analytics</NavLink>
-                  <NavLink to="/products/hr-reports" className="block px-5 py-3 text-zinc-900 hover:bg-zinc-100">HR Report’s as SaaS</NavLink>
-                  <NavLink to="/products/ats-cv-ranker" className="block px-5 py-3 text-zinc-900 hover:bg-zinc-100">ATS with CV Ranker</NavLink>
-                  <NavLink to="/products/hrms" className="block px-5 py-3 text-zinc-900 hover:bg-zinc-100">HRMS</NavLink>
-                </div>
+            <NavLink to="/about" className="h-full flex items-center">
+              {({ isActive }) => (
+                <span
+                  className={
+                    isActive
+                      ? "flex items-center text-zinc-900 font-semibold border-b-2 border-zinc-900 pb-1 h-full"
+                      : "flex items-center text-zinc-900 font-medium hover:text-zinc-900/80 transition-colors pb-1 h-full"
+                  }
+                >
+                  About Us
+                </span>
               )}
-            </div>
+            </NavLink>
+            {/* end duplicate product block removed */}
             {/* Company Dropdown - align with other nav items */}
             <div
               className="relative"
@@ -227,13 +230,6 @@ function Navbar() {
                 </button>
               )}
             </NavLink>
-            <NavLink to="/about" onClick={() => setMenuOpen(false)}>
-              {({ isActive }) => (
-                <button className={`text-left w-full px-6 py-3 ${isActive ? 'text-zinc-900 font-semibold border-b-2 border-zinc-900' : 'text-zinc-900 font-medium hover:text-zinc-900/80'}`}>
-                  About Us
-                </button>
-              )}
-            </NavLink>
             <NavLink to="/services" onClick={() => setMenuOpen(false)}>
               {({ isActive }) => (
                 <button className={`text-left w-full px-6 py-3 ${isActive ? 'text-zinc-900 font-semibold border-b-2 border-zinc-900' : 'text-zinc-900 font-medium hover:text-zinc-900/80'}`}>
@@ -254,8 +250,21 @@ function Navbar() {
               <NavLink to="/products/ats-cv-ranker" onClick={() => setMenuOpen(false)} className="block px-6 py-3 text-zinc-900 hover:bg-zinc-100">ATS with CV Ranker</NavLink>
               <NavLink to="/products/hrms" onClick={() => setMenuOpen(false)} className="block px-6 py-3 text-zinc-900 hover:bg-zinc-100">HRMS</NavLink>
             </div>
+            <NavLink to="/solutions" onClick={() => setMenuOpen(false)}>
+              <button className={`w-full px-6 py-3 text-left text-zinc-900 font-medium`}>Solutions</button>
+            </NavLink>
+            <NavLink to="/login" onClick={() => setMenuOpen(false)}>
+              <button className={`w-full px-6 py-3 text-left text-zinc-900 font-medium`}>Login</button>
+            </NavLink>
+            <NavLink to="/about" onClick={() => setMenuOpen(false)}>
+              {({ isActive }) => (
+                <button className={`text-left w-full px-6 py-3 ${isActive ? 'text-zinc-900 font-semibold border-b-2 border-zinc-900' : 'text-zinc-900 font-medium hover:text-zinc-900/80'}`}>
+                  About Us
+                </button>
+              )}
+            </NavLink>
             {/* Company dropdown for mobile */}
-              <div className="w-full">
+            <div className="w-full">
                <button
                 className={`w-full text-left px-6 py-3 flex items-center justify-between ${companyOpen ? 'text-zinc-900 font-semibold' : 'text-zinc-900 font-medium'}`}
                 onClick={() => setCompanyOpen((open) => !open)}
@@ -281,12 +290,6 @@ function Navbar() {
                   Contact Us
                 </button>
               )}
-            </NavLink>
-            <NavLink to="/solutions" onClick={() => setMenuOpen(false)}>
-              <button className={`w-full px-6 py-3 text-left text-zinc-900 font-medium`}>Solutions</button>
-            </NavLink>
-            <NavLink to="/login" onClick={() => setMenuOpen(false)}>
-              <button className={`w-full px-6 py-3 text-left text-zinc-900 font-medium`}>Login</button>
             </NavLink>
           </div>
           <style>{`

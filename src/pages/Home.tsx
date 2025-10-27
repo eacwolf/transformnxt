@@ -7,6 +7,7 @@ const Home = () => {
           <div className="blob blob-1" />
           <div className="blob blob-2" />
           <div className="blob blob-3" />
+          <div className="stripe-overlay" />
           <div className="particles">
             {Array.from({ length: 15 }).map((_, i) => (
               <div
@@ -74,41 +75,41 @@ const Home = () => {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16 w-full">
               <div className="bg-white rounded-xl shadow-lg p-0 flex flex-col items-center hover:scale-105 transition-transform duration-300 relative overflow-hidden min-h-[340px]">
-                <img src="/assets/images/it-consultancy.jpg" alt="Technology Consulting" className="absolute inset-0 w-full h-full object-cover opacity-70 blur-[1px]" style={{ filter: 'brightness(0.7) blur(1px)' }} />
+                <img src="/assets/images/it-consultancy.jpg" alt="Product Dev Line" className="absolute inset-0 w-full h-full object-cover opacity-70 blur-[1px]" style={{ filter: 'brightness(0.7) blur(1px)' }} />
                 <div className="absolute bottom-0 left-0 w-full z-10 flex flex-col items-center justify-end">
                   <div className="w-full px-8 pb-6 pt-10 relative flex flex-col items-center"
                     style={{
                       background: "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(30,41,59,0.85) 100%)",
                       backdropFilter: undefined
                     }}>
-                    <h3 className="font-bold text-lg mb-2 text-white drop-shadow-lg">Technology Consulting</h3>
-                    <p className="text-white text-center font-medium drop-shadow">Expert guidance to leverage technology for business growth and efficiency.</p>
+                    <h3 className="font-bold text-lg mb-2 text-white drop-shadow-lg">Product Dev Line</h3>
+                    <p className="text-white text-center font-medium drop-shadow">End-to-end product development services from concept to deployment.</p>
                   </div>
                 </div>
               </div>
               <div className="bg-white rounded-xl shadow-lg p-0 flex flex-col items-center hover:scale-105 transition-transform duration-300 relative overflow-hidden min-h-[340px]">
-                <img src="/assets/images/management-consultancy.png" alt="Management Consulting" className="absolute inset-0 w-full h-full object-cover object-top opacity-70 blur-[1px]" style={{ filter: 'brightness(0.7) blur(1px)' }} />
+                <img src="/assets/images/management-consultancy.png" alt="IT Managed Services" className="absolute inset-0 w-full h-full object-cover object-top opacity-70 blur-[1px]" style={{ filter: 'brightness(0.7) blur(1px)' }} />
                 <div className="absolute bottom-0 left-0 w-full z-10 flex flex-col items-center justify-end">
                   <div className="w-full px-8 pb-6 pt-10 relative flex flex-col items-center"
                     style={{
                       background: "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(30,41,59,0.85) 100%)",
                       backdropFilter: undefined
                     }}>
-                    <h3 className="font-bold text-lg mb-2 text-white drop-shadow-lg">Management Consulting</h3>
-                    <p className="text-white text-center font-medium drop-shadow">Strategic solutions to optimize operations and drive organizational success.</p>
+                    <h3 className="font-bold text-lg mb-2 text-white drop-shadow-lg">IT Managed Services</h3>
+                    <p className="text-white text-center font-medium drop-shadow">Comprehensive IT management and support for your business operations.</p>
                   </div>
                 </div>
               </div>
               <div className="bg-white rounded-xl shadow-lg p-0 flex flex-col items-center hover:scale-105 transition-transform duration-300 relative overflow-hidden min-h-[340px]">
-                <img src="/assets/images/hr.jpg" alt="Talent Acquisition & Hiring" className="absolute inset-0 w-full h-full object-cover opacity-70 blur-[1px]" style={{ filter: 'brightness(0.7) blur(1px)' }} />
+                <img src="/assets/images/hr.jpg" alt="HR Solutions" className="absolute inset-0 w-full h-full object-cover opacity-70 blur-[1px]" style={{ filter: 'brightness(0.7) blur(1px)' }} />
                 <div className="absolute bottom-0 left-0 w-full z-10 flex flex-col items-center justify-end">
                   <div className="w-full px-8 pb-6 pt-10 relative flex flex-col items-center"
                     style={{
                       background: "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(30,41,59,0.85) 100%)",
                       backdropFilter: undefined
                     }}>
-                    <h3 className="font-bold text-lg mb-2 text-white drop-shadow-lg">Talent Acquisition &amp; Hiring</h3>
-                    <p className="text-white text-center font-medium drop-shadow">Find and retain top talent with our comprehensive hiring solutions.</p>
+                    <h3 className="font-bold text-lg mb-2 text-white drop-shadow-lg">HR Solutions</h3>
+                    <p className="text-white text-center font-medium drop-shadow">Complete human resource management and staffing solutions.</p>
                   </div>
                 </div>
               </div>

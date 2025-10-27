@@ -166,6 +166,25 @@
   z-index: 2;
 }
 
+/* Diagonal stripe overlay similar to innoboon hero — subtle moving stripes */
+.hero-bg .stripe-overlay {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(135deg, rgba(255,255,255,0.02) 0 2px, rgba(0,0,0,0) 2px 40px);
+  mix-blend-mode: overlay;
+  z-index: 4;
+  animation: stripeShift 12s linear infinite;
+}
+
+@keyframes stripeShift {
+  0% { background-position: 0 0; }
+  100% { background-position: 400px 400px; }
+}
+
+/* Slight parallax movement for blob layer to match elegant hero motion */
+.blob { transform: translate3d(0,0,0); will-change: transform; }
+
 /* Animated blobs with enhanced effects */
 .blob { 
   position: absolute; 
