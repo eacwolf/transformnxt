@@ -57,9 +57,9 @@ export default function Contact() {
   };
 
   return (
-    <div className="w-full min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 mt-24">
+    <div className="w-full min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
       {/* Hero Section */}
-      <section className="bg-zinc-900 text-white text-center py-14">
+      <section className="bg-zinc-900 text-white text-center py-6">
         <div className="container mx-auto px-4">
           <h1 className="text-3xl md:text-4xl font-bold mb-2">Contact TransformNXT</h1>
           <p className="text-md md:text-lg opacity-90 max-w-2xl mx-auto">Get in touch for IT consulting, cloud strategy, software development, AI/ML solutions, or talent programs. We'll respond within 1 business day.</p>

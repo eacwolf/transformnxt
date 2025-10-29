@@ -2,7 +2,7 @@ const Home = () => {
   return (
     <>
       {/* Animated background section, full viewport height, no hero image */}
-      <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden hero-bg">
+      <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden hero-bg" style={{ marginTop: '-88px', paddingTop: '88px', minHeight: 'calc(100vh - 0px)' }}>
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <div className="blob blob-1" />
           <div className="blob blob-2" />

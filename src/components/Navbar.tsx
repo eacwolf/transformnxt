@@ -90,19 +90,6 @@ function Navbar() {
                 </span>
               )}
             </NavLink>
-            <NavLink to="/login" className="h-full flex items-center">
-              {({ isActive }) => (
-                <span
-                  className={
-                    isActive
-                      ? "flex items-center text-zinc-900 font-semibold border-b-2 border-zinc-900 pb-1 h-full"
-                      : "flex items-center text-zinc-900 font-medium hover:text-zinc-900/80 transition-colors pb-1 h-full"
-                  }
-                >
-                  Login
-                </span>
-              )}
-            </NavLink>
             <NavLink to="/about" className="h-full flex items-center">
               {({ isActive }) => (
                 <span
@@ -194,8 +181,21 @@ function Navbar() {
             </div>
           </div>
         </div>
-        {/* Contact Button */}
-        <div className="hidden md:flex items-center ml-8">
+        {/* Contact and Login Buttons */}
+        <div className="hidden md:flex items-center gap-4 ml-8">
+          <NavLink to="/login">
+            {({ isActive }) => (
+              <span
+                className={
+                  isActive
+                    ? "inline-flex items-center px-6 py-2 rounded-full font-semibold text-white bg-blue-600 shadow-lg"
+                    : "inline-flex items-center px-6 py-2 rounded-full font-medium text-blue-600 border border-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-200"
+                }
+              >
+                Login
+              </span>
+            )}
+          </NavLink>
           <NavLink to="/contact">
             {({ isActive }) => (
               <span
@@ -252,9 +252,6 @@ function Navbar() {
             </div>
             <NavLink to="/solutions" onClick={() => setMenuOpen(false)}>
               <button className={`w-full px-6 py-3 text-left text-zinc-900 font-medium`}>Solutions</button>
-            </NavLink>
-            <NavLink to="/login" onClick={() => setMenuOpen(false)}>
-              <button className={`w-full px-6 py-3 text-left text-zinc-900 font-medium`}>Login</button>
             </NavLink>
             <NavLink to="/about" onClick={() => setMenuOpen(false)}>
               {({ isActive }) => (
