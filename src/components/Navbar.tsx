@@ -6,6 +6,7 @@ function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [productOpen, setProductOpen] = useState(false);
   const [companyOpen, setCompanyOpen] = useState(false);
+  const [productMobileOpen, setProductMobileOpen] = useState(false);
   return (
     <nav className="w-full fixed top-0 left-0 z-50 bg-white border-b border-zinc-200 shadow-sm transition-all duration-300">
       <div
@@ -237,18 +238,32 @@ function Navbar() {
                 </button>
               )}
             </NavLink>
-            {/* Mobile Product list */}
+            {/* Mobile Product list (collapsible) */}
             <div className="w-full border-t border-zinc-100">
-              <div className="px-6 py-2 text-zinc-700 font-medium">Products</div>
-              <NavLink to="/products/ai-video-interviewer" onClick={() => setMenuOpen(false)} className="block px-6 py-3 text-zinc-900 hover:bg-zinc-100">AI Video Interviewer</NavLink>
-              <NavLink to="/products/ai-audio-interviewer" onClick={() => setMenuOpen(false)} className="block px-6 py-3 text-zinc-900 hover:bg-zinc-100">AI Audio Interviewer</NavLink>
-              <NavLink to="/products/ai-async-interviewer" onClick={() => setMenuOpen(false)} className="block px-6 py-3 text-zinc-900 hover:bg-zinc-100">AI Asynchronous Mode Interviewer</NavLink>
-              <NavLink to="/products/office-communicator" onClick={() => setMenuOpen(false)} className="block px-6 py-3 text-zinc-900 hover:bg-zinc-100">AI Office Communicator</NavLink>
-              <NavLink to="/products/interview-scheduler" onClick={() => setMenuOpen(false)} className="block px-6 py-3 text-zinc-900 hover:bg-zinc-100">AI Interview Scheduler</NavLink>
-              <NavLink to="/products/hr-analytics" onClick={() => setMenuOpen(false)} className="block px-6 py-3 text-zinc-900 hover:bg-zinc-100">HR Data Driven – Predictive Analytics</NavLink>
-              <NavLink to="/products/hr-reports" onClick={() => setMenuOpen(false)} className="block px-6 py-3 text-zinc-900 hover:bg-zinc-100">HR Report’s as SaaS</NavLink>
-              <NavLink to="/products/ats-cv-ranker" onClick={() => setMenuOpen(false)} className="block px-6 py-3 text-zinc-900 hover:bg-zinc-100">ATS with CV Ranker</NavLink>
-              <NavLink to="/products/hrms" onClick={() => setMenuOpen(false)} className="block px-6 py-3 text-zinc-900 hover:bg-zinc-100">HRMS</NavLink>
+              <button
+                className={`w-full text-left px-6 py-3 flex items-center justify-between text-zinc-900 font-medium`}
+                onClick={() => {
+                  setProductMobileOpen(o => !o);
+                  // close other mobile dropdowns
+                  if (!productMobileOpen) setCompanyOpen(false);
+                }}
+                aria-expanded={productMobileOpen}
+                aria-controls="mobile-products-list"
+              >
+                <span>Products</span>
+                <svg className={`w-4 h-4 ml-1 transition-transform duration-300 ${productMobileOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <div id="mobile-products-list" className={`w-full overflow-hidden transition-all duration-300 ${productMobileOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`} style={{ background: productMobileOpen ? '#f8f8f8' : 'transparent' }}>
+                <NavLink to="/products/ai-video-interviewer" className="block px-6 py-3 text-zinc-900 hover:bg-zinc-100" onClick={() => { setMenuOpen(false); setProductMobileOpen(false); }}>AI Video Interviewer</NavLink>
+                <NavLink to="/products/ai-audio-interviewer" className="block px-6 py-3 text-zinc-900 hover:bg-zinc-100" onClick={() => { setMenuOpen(false); setProductMobileOpen(false); }}>AI Audio Interviewer</NavLink>
+                <NavLink to="/products/ai-async-interviewer" className="block px-6 py-3 text-zinc-900 hover:bg-zinc-100" onClick={() => { setMenuOpen(false); setProductMobileOpen(false); }}>AI Asynchronous Mode Interviewer</NavLink>
+                <NavLink to="/products/office-communicator" className="block px-6 py-3 text-zinc-900 hover:bg-zinc-100" onClick={() => { setMenuOpen(false); setProductMobileOpen(false); }}>AI Office Communicator</NavLink>
+                <NavLink to="/products/interview-scheduler" className="block px-6 py-3 text-zinc-900 hover:bg-zinc-100" onClick={() => { setMenuOpen(false); setProductMobileOpen(false); }}>AI Interview Scheduler</NavLink>
+                <NavLink to="/products/hr-analytics" className="block px-6 py-3 text-zinc-900 hover:bg-zinc-100" onClick={() => { setMenuOpen(false); setProductMobileOpen(false); }}>HR Data Driven – Predictive Analytics</NavLink>
+                <NavLink to="/products/hr-reports" className="block px-6 py-3 text-zinc-900 hover:bg-zinc-100" onClick={() => { setMenuOpen(false); setProductMobileOpen(false); }}>HR Report’s as SaaS</NavLink>
+                <NavLink to="/products/ats-cv-ranker" className="block px-6 py-3 text-zinc-900 hover:bg-zinc-100" onClick={() => { setMenuOpen(false); setProductMobileOpen(false); }}>ATS with CV Ranker</NavLink>
+                <NavLink to="/products/hrms" className="block px-6 py-3 text-zinc-900 hover:bg-zinc-100" onClick={() => { setMenuOpen(false); setProductMobileOpen(false); }}>HRMS</NavLink>
+              </div>
             </div>
             <NavLink to="/solutions" onClick={() => setMenuOpen(false)}>
               <button className={`w-full px-6 py-3 text-left text-zinc-900 font-medium`}>Solutions</button>

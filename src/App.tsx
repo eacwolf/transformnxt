@@ -3,6 +3,7 @@ import ScrollToTop from './components/ScrollToTop';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import About from './pages/About';
+import Solutions from './pages/Solutions';
 import Services from './pages/services';
 import Contact from './pages/Contact';
 import Careers from './pages/Careers';
@@ -34,6 +35,7 @@ function App() {
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/solutions" element={<Solutions />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/careers" element={<Careers />} />

@@ -10,13 +10,45 @@
 
 
 <body>
-  <div style="display:flex;justify-content:center;padding:24px 0;">
+  <div id="top-brand" style="display:flex;justify-content:center;padding:24px 0;">
     <div
       style="width:96px;height:96px;background:#fff;display:flex;align-items:center;justify-content:center;border-radius:8px;">
       <img src="/assets/logo/transform-logo.png" alt="TransformNXT logo"
         style="max-width:88%;max-height:88%;display:block;" />
     </div>
   </div>
+  <script>
+    // Hide the top-brand logo on the login page to avoid duplicate header
+    (function () {
+      try {
+        const el = document.getElementById('top-brand');
+        if (!el) return;
+        const path = window.location.pathname || '/';
+        // hide on exact '/login' or '/login/'
+        if (path === '/login' || path === '/login/') {
+          el.style.display = 'none';
+        }
+        // also observe pushState/replaceState to handle SPA navigation
+        const hideIfLogin = () => {
+          const p = window.location.pathname;
+          el.style.display = (p === '/login' || p === '/login/') ? 'none' : '';
+        };
+        const _wr = (type) => {
+          const orig = history[type];
+          return function () {
+            const rv = orig.apply(this, arguments);
+            setTimeout(hideIfLogin, 0);
+            return rv;
+          };
+        };
+        history.pushState = _wr('pushState');
+        history.replaceState = _wr('replaceState');
+        window.addEventListener('popstate', hideIfLogin);
+      } catch (e) {
+        // ignore
+      }
+    })();
+  </script>
   <div id="root"></div>
   <script type="module" src="/src/main.tsx"></script>
 </body>
