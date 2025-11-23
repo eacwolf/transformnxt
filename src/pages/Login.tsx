@@ -35,7 +35,6 @@ export default function Login() {
     message: ''
   });
   const [formErrors, setFormErrors] = useState<FormErrors>({});
-  const [remainingChars, setRemainingChars] = useState(500);
 
   const validateField = (name: keyof FormData, value: string): string | undefined => {
     switch (name) {
@@ -62,22 +61,18 @@ export default function Login() {
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
-    
-    if (name === 'message') {
-      setRemainingChars(500 - value.length);
-    } else {
+
+    setFormErrors(prev => ({
+      ...prev,
+      [name]: validateField(name as keyof FormData, value)
+    }));
+
+    // Validate confirm password when password changes
+    if (name === 'password' && formData.confirmPassword) {
       setFormErrors(prev => ({
         ...prev,
-        [name]: validateField(name as keyof FormData, value)
+        confirmPassword: formData.confirmPassword !== value ? 'Passwords do not match' : undefined
       }));
-
-      // Validate confirm password when password changes
-      if (name === 'password' && formData.confirmPassword) {
-        setFormErrors(prev => ({
-          ...prev,
-          confirmPassword: formData.confirmPassword !== value ? 'Passwords do not match' : undefined
-        }));
-      }
     }
   };
 
@@ -184,7 +179,7 @@ export default function Login() {
                     value={formData.phoneNumber}
                     onChange={handleChange}
                     className="mt-1 block w-full border border-zinc-300 rounded-md shadow-sm py-2 px-3 text-zinc-900 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:border-zinc-500"
-                    placeholder="+1 (555) 000-0000"
+                    placeholder="+91 91234 56789"
                   />
                   {formErrors.phoneNumber && <p className="mt-1 text-sm text-red-600">{formErrors.phoneNumber}</p>}
                 </div>
@@ -246,22 +241,7 @@ export default function Login() {
                   )}
                 </div>
 
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-zinc-700">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    maxLength={500}
-                    value={formData.message}
-                    onChange={handleChange}
-                    className="mt-1 block w-full border border-zinc-300 rounded-md shadow-sm py-2 px-3 text-zinc-900 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:border-zinc-500"
-                    placeholder="Type your message here..."
-                  />
-                  <p className="mt-1 text-sm text-yellow-600 text-right">{remainingChars} characters remaining</p>
-                </div>
+                {/* Message field removed per request */}
               </>
             )}
           </div>

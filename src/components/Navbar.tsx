@@ -7,6 +7,8 @@ function Navbar() {
   const [productOpen, setProductOpen] = useState(false);
   const [companyOpen, setCompanyOpen] = useState(false);
   const [productMobileOpen, setProductMobileOpen] = useState(false);
+  const [howOpen, setHowOpen] = useState(false);
+  const [howMobileOpen, setHowMobileOpen] = useState(false);
   return (
     <nav className="w-full fixed top-0 left-0 z-50 bg-white border-b border-zinc-200 shadow-sm transition-all duration-300">
       <div
@@ -78,6 +80,31 @@ function Navbar() {
                 </div>
               )}
             </div>
+            <div className="relative" onMouseEnter={() => setHowOpen(true)} onMouseLeave={() => setHowOpen(false)}>
+              <button
+                type="button"
+                className="flex items-center text-zinc-900 font-medium hover:text-zinc-900/80 transition-colors pb-1 h-full"
+                aria-haspopup="true"
+                aria-expanded={howOpen}
+                onClick={() => setHowOpen((o) => !o)}
+                style={{ transform: 'translateY(2px)' }}
+              >
+                <span className="inline-flex items-center gap-2">How it works
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                </span>
+              </button>
+              <div style={{ minHeight: '8px' }} />
+              {howOpen && (
+                <div className="absolute left-0 top-full min-w-[240px] bg-white border border-zinc-200 rounded-xl shadow-lg overflow-hidden transition-all duration-200 z-50">
+                  <NavLink to="/how-it-works/employers" className="block px-5 py-3 text-zinc-900 hover:bg-zinc-100">For Employers</NavLink>
+                  <NavLink to="/how-it-works/universities" className="block px-5 py-3 text-zinc-900 hover:bg-zinc-100">For University / College</NavLink>
+                  <NavLink to="/how-it-works/training" className="block px-5 py-3 text-zinc-900 hover:bg-zinc-100">For Training Institutes</NavLink>
+                  <NavLink to="/how-it-works/staffing" className="block px-5 py-3 text-zinc-900 hover:bg-zinc-100">For Staffing Agencies</NavLink>
+                  <NavLink to="/how-it-works/candidates" className="block px-5 py-3 text-zinc-900 hover:bg-zinc-100">For Jobseekers / Students</NavLink>
+                </div>
+              )}
+            </div>
+            
             <NavLink to="/solutions" className="h-full flex items-center">
               {({ isActive }) => (
                 <span
@@ -263,6 +290,29 @@ function Navbar() {
                 <NavLink to="/products/hr-reports" className="block px-6 py-3 text-zinc-900 hover:bg-zinc-100" onClick={() => { setMenuOpen(false); setProductMobileOpen(false); }}>HR Report’s as SaaS</NavLink>
                 <NavLink to="/products/ats-cv-ranker" className="block px-6 py-3 text-zinc-900 hover:bg-zinc-100" onClick={() => { setMenuOpen(false); setProductMobileOpen(false); }}>ATS with CV Ranker</NavLink>
                 <NavLink to="/products/hrms" className="block px-6 py-3 text-zinc-900 hover:bg-zinc-100" onClick={() => { setMenuOpen(false); setProductMobileOpen(false); }}>HRMS</NavLink>
+              </div>
+            </div>
+            {/* Mobile 'How it works' list (collapsible) */}
+            <div className="w-full border-t border-zinc-100">
+              <button
+                className={`w-full text-left px-6 py-3 flex items-center justify-between text-zinc-900 font-medium`}
+                onClick={() => {
+                  setHowMobileOpen(o => !o);
+                  // close other mobile dropdowns
+                  if (!howMobileOpen) setProductMobileOpen(false);
+                }}
+                aria-expanded={howMobileOpen}
+                aria-controls="mobile-how-list"
+              >
+                <span>How it works</span>
+                <svg className={`w-4 h-4 ml-1 transition-transform duration-300 ${howMobileOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <div id="mobile-how-list" className={`w-full overflow-hidden transition-all duration-300 ${howMobileOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`} style={{ background: howMobileOpen ? '#f8f8f8' : 'transparent' }}>
+                <NavLink to="/how-it-works/employers" className="block px-6 py-3 text-zinc-900 hover:bg-zinc-100" onClick={() => { setMenuOpen(false); setHowMobileOpen(false); }}>For Employers</NavLink>
+                <NavLink to="/how-it-works/universities" className="block px-6 py-3 text-zinc-900 hover:bg-zinc-100" onClick={() => { setMenuOpen(false); setHowMobileOpen(false); }}>For University / College</NavLink>
+                <NavLink to="/how-it-works/training" className="block px-6 py-3 text-zinc-900 hover:bg-zinc-100" onClick={() => { setMenuOpen(false); setHowMobileOpen(false); }}>For Training Institutes</NavLink>
+                <NavLink to="/how-it-works/staffing" className="block px-6 py-3 text-zinc-900 hover:bg-zinc-100" onClick={() => { setMenuOpen(false); setHowMobileOpen(false); }}>For Staffing Agencies</NavLink>
+                <NavLink to="/how-it-works/candidates" className="block px-6 py-3 text-zinc-900 hover:bg-zinc-100" onClick={() => { setMenuOpen(false); setHowMobileOpen(false); }}>For Jobseekers / Students</NavLink>
               </div>
             </div>
             <NavLink to="/solutions" onClick={() => setMenuOpen(false)}>

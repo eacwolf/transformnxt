@@ -26,7 +26,7 @@ export default function Solutions() {
   const toggle = (i: number) => setOpenIndex(openIndex === i ? null : i);
 
   return (
-    <div className="mx-auto max-w-7xl px-6 py-12">
+    <div className="mx-auto max-w-7xl px-6 pt-0 pb-12">
       <header className="text-center max-w-3xl mx-auto">
         <h1 className="text-3xl sm:text-4xl font-extrabold text-zinc-900">Solutions for modern HR & Hiring</h1>
         <p className="mt-4 text-zinc-600">A unified suite of tools to accelerate recruiting, streamline HR operations, and deliver measurable business outcomes.</p>

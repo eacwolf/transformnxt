@@ -1,54 +1,121 @@
+import { Link } from "react-router-dom";
 
-import { Mail, Phone, Linkedin, Twitter, Github } from 'lucide-react';
+export default function Footer() {
+  return (
+    <footer className="border-t border-slate-200 bg-[#f5f7ff]">
+      <div className="mx-auto max-w-6xl px-6 py-10">
+        {/* top row */}
+        <div className="grid gap-10 md:grid-cols-[minmax(0,2fr),minmax(0,1fr),minmax(0,1fr)]">
+          {/* BRAND + DESCRIPTION */}
+          <div>
+            <div className="text-lg font-extrabold tracking-tight text-slate-900">
+              Transform<span className="text-[#2f6fff]">NXT</span>
+            </div>
 
-const Footer = () => (
-  <footer className="bg-[#f7f7fb] border-t-2 border-zinc-900 pt-10 pb-0 text-gray-700 relative" style={{ backgroundImage: 'radial-gradient(circle, #e5e5e5 1px, transparent 1px)', backgroundSize: '24px 24px' }}>
-    <div className="container mx-auto max-w-[1400px] px-4">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-8 border-b border-gray-200">
-        {/* Logo & Description */}
-        <div className="flex flex-col items-center md:items-start text-center md:text-left col-span-1">
-          <img src="/assets/logo/transform-logo.png" alt="TransformNXT Logo" className="h-20 mb-4" />
-          <p className="text-base max-w-md mb-0">
-            TransformNXT is your trusted IT partner for digital transformation, software development, cloud solutions, and technology consulting. We empower businesses to innovate and grow with cutting-edge IT services and expert support.
-          </p>
+            <p className="mt-3 max-w-md text-xs leading-relaxed text-slate-600">
+              TransformNXT is your trusted IT partner for digital transformation, software
+              development, cloud solutions, and technology consulting. We empower businesses to
+              innovate and grow with cutting-edge IT services and expert support.
+            </p>
+
+            <div className="mt-4 flex flex-wrap items-center gap-4 text-xs text-slate-600">
+              <div className="flex items-center gap-2">
+                <span className="inline-flex h-6 w-6 items-center justify-center rounded-full border border-slate-300 text-[0.7rem]">
+                  ☎
+                </span>
+                <span>0000000000</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="inline-flex h-6 w-6 items-center justify-center rounded-full border border-slate-300 text-[0.7rem]">
+                  ✉
+                </span>
+                <span>akhil@transformnxt.in</span>
+              </div>
+            </div>
+          </div>
+
+          {/* QUICK LINKS */}
+          <div>
+            <h4 className="text-sm font-semibold text-slate-900">QUICK LINKS</h4>
+            <ul className="mt-3 space-y-1.5 text-xs text-slate-600">
+              <li>
+                <Link to="/about" className="hover:text-slate-900">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" className="hover:text-slate-900">
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/partners" className="hover:text-slate-900">
+                  Partners
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="hover:text-slate-900">
+                  Contact Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/plans" className="hover:text-slate-900">
+                  Get Your Plan
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* EXPLORE */}
+          <div>
+            <h4 className="text-sm font-semibold text-slate-900">EXPLORE</h4>
+            <ul className="mt-3 space-y-1.5 text-xs text-slate-600">
+              <li>
+                <Link to="/projects" className="hover:text-slate-900">
+                  Our Projects
+                </Link>
+              </li>
+              <li>
+                <Link to="/case-studies" className="hover:text-slate-900">
+                  Case Studies
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog" className="hover:text-slate-900">
+                  Tech Blog
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
-        {/* Quick Links */}
-        <div className="flex flex-col items-center md:items-start col-span-1">
-          <h3 className="text-zinc-900 font-semibold text-lg mb-3">QUICK LINKS</h3>
-          <ul className="space-y-2 text-base">
-            <li><a href="/about" className="hover:text-zinc-900">About Us</a></li>
-            <li><a href="/services" className="hover:text-zinc-900">Services</a></li>
-            <li><a href="/partners" className="hover:text-zinc-900">Partners</a></li>
-            <li><a href="/contact" className="hover:text-zinc-900">Contact Us</a></li>
-            <li><a href="/get-plan" className="hover:text-zinc-900">Get Your Plan</a></li>
-          </ul>
-        </div>
-        {/* Explore - IT relevant */}
-        <div className="flex flex-col items-center md:items-start col-span-1">
-          <h3 className="text-zinc-900 font-semibold text-lg mb-3">EXPLORE</h3>
-          <ul className="space-y-2 text-base">
-            <li><a href="/projects" className="hover:text-zinc-900">Our Projects</a></li>
-            <li><a href="/case-studies" className="hover:text-zinc-900">Case Studies</a></li>
-            <li><a href="/blog" className="hover:text-zinc-900">Tech Blog</a></li>
-          </ul>
+
+        {/* bottom row */}
+        <div className="mt-8 flex flex-col items-center justify-between gap-4 border-t border-slate-200 pt-4 text-[0.7rem] text-slate-500 md:flex-row">
+          <p>© {new Date().getFullYear()} TransformNXT. All rights reserved.</p>
+
+          <div className="flex items-center gap-4">
+            {/* simple social placeholders – replace with real icons if you like */}
+            <button
+              type="button"
+              className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-slate-300 text-[0.7rem] text-slate-600 hover:border-slate-400 hover:text-slate-900"
+            >
+              in
+            </button>
+            <button
+              type="button"
+              className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-slate-300 text-[0.7rem] text-slate-600 hover:border-slate-400 hover:text-slate-900"
+            >
+              X
+            </button>
+            <button
+              type="button"
+              className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-slate-300 text-[0.7rem] text-slate-600 hover:border-slate-400 hover:text-slate-900"
+            >
+              🌐
+            </button>
+          </div>
         </div>
       </div>
-      {/* Contact & Social */}
-      <div className="flex flex-col md:flex-row justify-between items-center py-6 text-sm border-b border-gray-200">
-        <div className="flex items-center gap-4 mb-2 md:mb-0">
-          <span className="flex items-center gap-2"><Phone className="w-4 h-4" /> 000000000</span>
-          <span className="flex items-center gap-2"><Mail className="w-4 h-4" /> akhil@transformnxt.in</span>
-        </div>
-        <div className="flex gap-4">
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-900"><Linkedin className="w-5 h-5" /></a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-900"><Twitter className="w-5 h-5" /></a>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-900"><Github className="w-5 h-5" /></a>
-        </div>
-      </div>
-      {/* Copyright */}
-      <div className="text-center py-4 text-xs text-gray-400">© 2025 TransformNXT. All rights reserved.</div>
-    </div>
-  </footer>
-);
-
-export default Footer;
+    </footer>
+  );
+}

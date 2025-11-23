@@ -21,6 +21,12 @@ import HRAnalytics from './pages/products/hr-analytics';
 import HRReports from './pages/products/hr-reports';
 import ATSCVRanker from './pages/products/ats-cv-ranker';
 import HRMS from './pages/products/hrms';
+// How it works pages
+import Employers from './pages/how-it-works/Employers';
+import Universities from './pages/how-it-works/Universities';
+import Training from './pages/how-it-works/Training';
+import Staffing from './pages/how-it-works/Staffing';
+import Candidates from './pages/how-it-works/Candidates';
 import './index.css';
 
 function App() {
@@ -52,6 +58,12 @@ function App() {
           <Route path="/products/hr-reports" element={<HRReports />} />
           <Route path="/products/ats-cv-ranker" element={<ATSCVRanker />} />
           <Route path="/products/hrms" element={<HRMS />} />
+          {/* How it works pages */}
+          <Route path="/how-it-works/employers" element={<Employers />} />
+          <Route path="/how-it-works/universities" element={<Universities />} />
+          <Route path="/how-it-works/training" element={<Training />} />
+          <Route path="/how-it-works/staffing" element={<Staffing />} />
+          <Route path="/how-it-works/candidates" element={<Candidates />} />
         </Route>
       </Routes>
     </Router>
