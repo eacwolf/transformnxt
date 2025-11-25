@@ -146,7 +146,6 @@ export default function Universities() {
             <h2 className="text-2xl font-semibold text-slate-900 sm:text-[2rem]">
               Build an interview lab on campus.
             </h2>
-            <div className="mt-3 h-1 w-24 rounded-full bg-[#2f6fff]" />
             <p className="mt-4 text-sm leading-relaxed text-slate-600">
               Bring together students, faculty, and employers around one shared definition of career
               readiness. Curate question templates by role, assess communication and problem-solving
@@ -178,7 +177,7 @@ export default function Universities() {
                 </div>
               </li>
               <li className="flex gap-3">
-                <span className="mt-1 h-3 w-3 rounded-full bg-sky-400 ring-4 ring-sky-100" />
+                <span className="mt-1 w-3 h-3 rounded-full bg-slate-400" />
                 <div>
                   <h3 className="font-semibold">Invite students to practise</h3>
                   <p className="mt-1 text-xs text-slate-600">
@@ -188,7 +187,7 @@ export default function Universities() {
                 </div>
               </li>
               <li className="flex gap-3">
-                <span className="mt-1 h-3 w-3 rounded-full bg-emerald-400 ring-4 ring-emerald-100" />
+                <span className="mt-1 w-3 h-3 rounded-full bg-slate-400" />
                 <div>
                   <h3 className="font-semibold">Review and coach</h3>
                   <p className="mt-1 text-xs text-slate-600">
@@ -198,7 +197,7 @@ export default function Universities() {
                 </div>
               </li>
               <li className="flex gap-3">
-                <span className="mt-1 h-3 w-3 rounded-full bg-amber-400 ring-4 ring-amber-100" />
+                <span className="mt-1 h-3 w-3 rounded-full bg-slate-400 ring-4 ring-slate-100" />
                 <div>
                   <h3 className="font-semibold">Share with employers</h3>
                   <p className="mt-1 text-xs text-slate-600">
@@ -218,7 +217,6 @@ export default function Universities() {
           <h2 className="text-center text-2xl font-semibold text-slate-900">
             How it helps institutions
           </h2>
-          <div className="mx-auto mt-3 h-1 w-24 rounded-full bg-[#2f6fff]" />
           <p className="mt-4 text-center text-sm text-slate-600">
             Turn employability into something you can measure, coach, and communicate.
           </p>

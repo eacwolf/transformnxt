@@ -81,7 +81,6 @@ export default function Training() {
           <h2 className="text-center text-2xl font-semibold text-slate-900">
             Where training assessments make the biggest impact
           </h2>
-          <div className="mx-auto mt-3 h-1 w-24 rounded-full bg-[#2f6fff]" />
 
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             <div className="rounded-3xl bg-white p-6 shadow-sm">
@@ -122,7 +121,6 @@ export default function Training() {
             <h2 className="text-2xl font-semibold text-slate-900 sm:text-[2rem]">
               How training assessments work
             </h2>
-            <div className="mt-3 h-1 w-24 rounded-full bg-[#2f6fff]" />
             <p className="mt-4 text-sm leading-relaxed text-slate-600">
               Structured AI interviews track progress over time, verify competencies, and allow
               training teams to compare performance across multiple cohorts or batches.
@@ -137,7 +135,7 @@ export default function Training() {
           <div>
             <ol className="space-y-5 text-sm text-slate-800">
               <li className="flex gap-3">
-                <span className="mt-1 h-3 w-3 rounded-full bg-sky-400 ring-4 ring-sky-100" />
+                <span className="mt-1 w-3 h-3 rounded-full bg-slate-400" />
                 <div>
                   <h3 className="font-semibold">1. Map interviews to the curriculum</h3>
                   <p className="mt-1 text-xs text-slate-600">
@@ -148,7 +146,7 @@ export default function Training() {
               </li>
 
               <li className="flex gap-3">
-                <span className="mt-1 h-3 w-3 rounded-full bg-emerald-400 ring-4 ring-emerald-100" />
+                <span className="mt-1 w-3 h-3 rounded-full bg-slate-400" />
                 <div>
                   <h3 className="font-semibold">2. Learners complete asynchronous interviews</h3>
                   <p className="mt-1 text-xs text-slate-600">
@@ -159,7 +157,7 @@ export default function Training() {
               </li>
 
               <li className="flex gap-3">
-                <span className="mt-1 h-3 w-3 rounded-full bg-indigo-400 ring-4 ring-indigo-100" />
+                <span className="mt-1 h-3 w-3 rounded-full bg-slate-400 ring-4 ring-slate-100" />
                 <div>
                   <h3 className="font-semibold">3. Trainers review and score</h3>
                   <p className="mt-1 text-xs text-slate-600">
@@ -170,7 +168,7 @@ export default function Training() {
               </li>
 
               <li className="flex gap-3">
-                <span className="mt-1 h-3 w-3 rounded-full bg-rose-400 ring-4 ring-rose-100" />
+                <span className="mt-1 w-3 h-3 rounded-full bg-slate-400" />
                 <div>
                   <h3 className="font-semibold">4. Generate verified candidate reports</h3>
                   <p className="mt-1 text-xs text-slate-600">
@@ -190,7 +188,6 @@ export default function Training() {
           <h2 className="text-center text-2xl font-semibold text-slate-900">
             Benefits for training providers
           </h2>
-          <div className="mx-auto mt-3 h-1 w-24 rounded-full bg-[#2f6fff]" />
 
           <ul className="mt-8 grid gap-6 text-sm text-slate-700 md:grid-cols-2">
             <li className="rounded-2xl bg-white p-5 shadow-sm">

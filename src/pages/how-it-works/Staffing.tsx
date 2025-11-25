@@ -82,7 +82,6 @@ export default function Staffing() {
           <h2 className="text-center text-2xl font-semibold text-slate-900">
             How modern staffing teams use async interviews
           </h2>
-          <div className="mx-auto mt-3 h-1 w-24 rounded-full bg-[#2f6fff]" />
 
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             <div className="rounded-3xl bg-white p-6 shadow-sm">
@@ -122,7 +121,6 @@ export default function Staffing() {
             <h2 className="text-2xl font-semibold text-slate-900 sm:text-[2rem]">
               Streamline your pre-screening workflow.
             </h2>
-            <div className="mt-3 h-1 w-24 rounded-full bg-[#2f6fff]" />
             <p className="mt-4 text-sm leading-relaxed text-slate-600">
               Build repeatable assessments that match your clients’ expectations. Standardize
               questions, automate invites, and create data-rich submissions that increase placement
@@ -139,7 +137,7 @@ export default function Staffing() {
           <div>
             <ol className="space-y-5 text-sm text-slate-800">
               <li className="flex gap-3">
-                <span className="mt-1 h-3 w-3 rounded-full bg-sky-400 ring-4 ring-sky-100" />
+                <span className="mt-1 w-3 h-3 rounded-full bg-slate-400" />
                 <div>
                   <h3 className="font-semibold">1. Create reusable role templates</h3>
                   <p className="mt-1 text-xs text-slate-600">
@@ -150,7 +148,7 @@ export default function Staffing() {
               </li>
 
               <li className="flex gap-3">
-                <span className="mt-1 h-3 w-3 rounded-full bg-emerald-400 ring-4 ring-emerald-100" />
+                <span className="mt-1 w-3 h-3 rounded-full bg-slate-400" />
                 <div>
                   <h3 className="font-semibold">2. Invite candidates automatically</h3>
                   <p className="mt-1 text-xs text-slate-600">
@@ -161,7 +159,7 @@ export default function Staffing() {
               </li>
 
               <li className="flex gap-3">
-                <span className="mt-1 h-3 w-3 rounded-full bg-indigo-400 ring-4 ring-indigo-100" />
+                <span className="mt-1 h-3 w-3 rounded-full bg-slate-400 ring-4 ring-slate-100" />
                 <div>
                   <h3 className="font-semibold">3. Review & score consistently</h3>
                   <p className="mt-1 text-xs text-slate-600">
@@ -172,7 +170,7 @@ export default function Staffing() {
               </li>
 
               <li className="flex gap-3">
-                <span className="mt-1 h-3 w-3 rounded-full bg-rose-400 ring-4 ring-rose-100" />
+                <span className="mt-1 w-3 h-3 rounded-full bg-slate-400" />
                 <div>
                   <h3 className="font-semibold">4. Deliver high-quality shortlists</h3>
                   <p className="mt-1 text-xs text-slate-600">
@@ -192,7 +190,6 @@ export default function Staffing() {
           <h2 className="text-center text-2xl font-semibold text-slate-900">
             Why agencies rely on TransformNXT
           </h2>
-          <div className="mx-auto mt-3 h-1 w-24 rounded-full bg-[#2f6fff]" />
 
           <ul className="mt-8 grid gap-6 text-sm text-slate-700 md:grid-cols-2">
             <li className="rounded-2xl bg-white p-5 shadow-sm">

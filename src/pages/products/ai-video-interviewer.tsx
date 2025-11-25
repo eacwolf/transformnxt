@@ -119,7 +119,6 @@ export default function AIAsyncInterviewer() {
               <h2 className="text-2xl font-semibold text-slate-900">
                 Give every candidate the same chance to shine.
               </h2>
-              <div className="mt-3 h-1 w-20 rounded-full bg-[#2f6fff]" />
               <p className="mt-4 text-sm text-slate-600 leading-relaxed">
                 Early interviews often depend on who picks up the phone and how much time a recruiter
                 has that day. With TransformNXT async video, every candidate gets the same structured
@@ -181,7 +180,6 @@ export default function AIAsyncInterviewer() {
           <h2 className="text-2xl font-semibold text-slate-900">
             How TransformNXT async video interviews work
           </h2>
-          <div className="mt-3 h-1 w-20 rounded-full bg-[#2f6fff]" />
 
           <div className="mt-8 grid gap-6 text-sm text-slate-800 md:grid-cols-4">
             <div className="rounded-2xl bg-[#f7f9ff] p-5">
@@ -235,7 +233,6 @@ export default function AIAsyncInterviewer() {
           <h2 className="text-2xl font-semibold text-slate-900">
             Capabilities built for async video hiring
           </h2>
-          <div className="mt-3 h-1 w-20 rounded-full bg-[#2f6fff]" />
 
           <div className="mt-8 grid gap-6 md:grid-cols-3 text-sm text-slate-700">
             <div className="rounded-2xl bg-[#f7f9ff] p-5">

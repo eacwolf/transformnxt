@@ -74,7 +74,6 @@ export default function Employers() {
       <section className="py-16 bg-[#f7f9ff]">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-center text-2xl font-semibold">Where async interviews excel</h2>
-          <div className="mx-auto mt-3 w-24 h-1 bg-[#2f6fff] rounded-full" />
 
           <div className="grid md:grid-cols-3 gap-6 mt-10">
             <div className="p-6 bg-white rounded-3xl shadow-sm">
@@ -110,8 +109,6 @@ export default function Employers() {
               Reduce screening time and improve hiring outcomes.
             </h2>
 
-            <div className="mt-3 h-1 w-24 rounded-full bg-[#2f6fff]" />
-
             <p className="mt-4 text-sm leading-relaxed text-slate-600">
               Structured video interviews eliminate scheduling delays, letting your team review
               candidate responses anytime.
@@ -127,7 +124,7 @@ export default function Employers() {
           <div>
             <ol className="space-y-5 text-sm text-slate-800">
               <li className="flex gap-3">
-                <span className="mt-1 w-3 h-3 rounded-full bg-sky-400 ring-4 ring-sky-100" />
+                <span className="mt-1 w-3 h-3 rounded-full bg-slate-400" />
                 <div>
                   <h3 className="font-semibold">1. Build templates</h3>
                   <p className="text-xs mt-1 text-slate-600">
@@ -137,7 +134,7 @@ export default function Employers() {
               </li>
 
               <li className="flex gap-3">
-                <span className="mt-1 w-3 h-3 rounded-full bg-emerald-400 ring-4 ring-emerald-100" />
+                <span className="mt-1 w-3 h-3 rounded-full bg-slate-400" />
                 <div>
                   <h3 className="font-semibold">2. Invite applicants</h3>
                   <p className="text-xs mt-1 text-slate-600">
@@ -147,7 +144,7 @@ export default function Employers() {
               </li>
 
               <li className="flex gap-3">
-                <span className="mt-1 w-3 h-3 rounded-full bg-indigo-400 ring-4 ring-indigo-100" />
+                <span className="mt-1 w-3 h-3 rounded-full bg-slate-400" />
                 <div>
                   <h3 className="font-semibold">3. Review & shortlist</h3>
                   <p className="text-xs mt-1 text-slate-600">
@@ -157,7 +154,7 @@ export default function Employers() {
               </li>
 
               <li className="flex gap-3">
-                <span className="mt-1 w-3 h-3 rounded-full bg-rose-400 ring-4 ring-rose-100" />
+                <span className="mt-1 w-3 h-3 rounded-full bg-slate-400" />
                 <div>
                   <h3 className="font-semibold">4. Move top talent to live rounds</h3>
                   <p className="text-xs mt-1 text-slate-600">
@@ -174,7 +171,6 @@ export default function Employers() {
       <section className="bg-[#f7f9ff] py-16">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-center text-2xl font-semibold">Benefits for Employers</h2>
-          <div className="mx-auto mt-3 h-1 w-24 rounded-full bg-[#2f6fff]" />
 
           <ul className="mt-10 grid gap-6 md:grid-cols-2 text-sm text-slate-700">
 

@@ -78,7 +78,6 @@ export default function Candidates() {
           <h2 className="text-center text-2xl font-semibold text-slate-900">
             Turn your practice into proof of skills
           </h2>
-          <div className="mx-auto mt-3 h-1 w-24 bg-[#2f6fff] rounded-full" />
 
           <div className="mt-10 grid gap-6 md:grid-cols-3">
 
@@ -115,8 +114,6 @@ export default function Candidates() {
             <h2 className="text-2xl sm:text-[2rem] font-semibold text-slate-900">
               Practise with structure, not guesswork.
             </h2>
-
-            <div className="mt-3 h-1 w-24 bg-[#2f6fff] rounded-full" />
 
             <p className="mt-4 text-sm text-slate-600 leading-relaxed">
               Real interview-style questions and replayable recordings help you gain confidence
