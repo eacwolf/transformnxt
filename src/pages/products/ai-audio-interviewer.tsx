@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import PageContainer from "../../components/PageContainer";
 
-const HERO_IMAGE = "/images/ai-audio-interviewer.jpg"; // replace with your own asset
+
+const HERO_IMAGE =
+  "https://images.pexels.com/photos/8867437/pexels-photo-8867437.jpeg?auto=compress&cs=tinysrgb&w=1200";
 
 export default function AIAudioInterviewer() {
   return (

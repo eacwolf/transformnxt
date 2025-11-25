@@ -2,7 +2,9 @@
 import { Link } from "react-router-dom";
 import PageContainer from "../../components/PageContainer";
 
-const HERO_IMAGE = "/images/ai-async-interviewer.jpg"; // replace with your own asset
+const HERO_IMAGE =
+  "https://images.pexels.com/photos/1181622/pexels-photo-1181622.jpeg?auto=compress&cs=tinysrgb&w=1200";
+ // replace with your own asset
 
 export default function AIAsyncInterviewer() {
   return (
