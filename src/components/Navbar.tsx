@@ -17,16 +17,12 @@ function Navbar() {
       >
         {/* Logo + Title */}
         <NavLink to="/" className="flex items-center gap-3">
-          <div className="bg-white p-2 rounded-md shadow-sm flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16">
+          <div className="bg-white p-2 rounded-md shadow-sm flex items-center justify-center w-14 h-14 sm:w-20 sm:h-20">
             <img
               src="/assets/logo/transform-logo.png"
               alt="TransformNXT Logo"
               className="max-h-full max-w-full"
             />
-          </div>
-          <div className="hidden sm:block">
-            <div className="text-sm text-zinc-700">TransformNXT</div>
-            <div className="text-xs text-zinc-500">IT & Hiring Solutions</div>
           </div>
         </NavLink>
         {/* Desktop Nav */}

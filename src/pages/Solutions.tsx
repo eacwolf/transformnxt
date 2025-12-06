@@ -1,120 +1,210 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import PageContainer from "../components/PageContainer";
+import { Link } from "react-router-dom";
 
 export default function Solutions() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  const features = [
-    {
-      title: 'AI-powered Interviewing',
-      body: 'Automate candidate screening with video & audio analysis, extract skills and fit insights, and reduce time-to-hire with data-driven shortlisting.'
-    },
-    {
-      title: 'HR Analytics & Reporting',
-      body: 'Turn HR data into actionable dashboards, predictive attrition models and compliance-ready reports for stakeholders.'
-    },
-    {
-      title: 'Interview Scheduling & Orchestration',
-      body: 'Seamlessly schedule interviews across timezones, sync calendars, send reminders and reduce no-shows.'
-    },
-    {
-      title: 'ATS & CV Ranking',
-      body: 'Rank CVs using AI, prioritize high-fit candidates and integrate with your existing HRMS and ATS workflows.'
-    }
-  ];
-
-  const toggle = (i: number) => setOpenIndex(openIndex === i ? null : i);
-
   return (
-    <div className="mx-auto max-w-7xl px-6 pt-0 pb-12">
-      <header className="text-center max-w-3xl mx-auto">
-        <h1 className="text-3xl sm:text-4xl font-extrabold text-zinc-900">Solutions for modern HR & Hiring</h1>
-        <p className="mt-4 text-zinc-600">A unified suite of tools to accelerate recruiting, streamline HR operations, and deliver measurable business outcomes.</p>
-        <div className="mt-6 flex justify-center gap-3 flex-wrap">
-          <Link to="/products/ai-video-interviewer" className="inline-flex items-center px-5 py-3 bg-blue-600 text-white rounded-md shadow hover:bg-blue-700">AI Video Interviewer</Link>
-          <Link to="/products/ai-audio-interviewer" className="inline-flex items-center px-5 py-3 bg-zinc-100 text-zinc-900 rounded-md shadow hover:bg-zinc-200">AI Audio Interviewer</Link>
-        </div>
-      </header>
-
-      <section className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+    <PageContainer>
+      {/* HERO */}
+      <section className="max-w-6xl mx-auto px-6 py-16 grid gap-12 md:grid-cols-2 items-center">
+        
         <div>
-          <h2 className="text-2xl font-bold text-zinc-900">Why TransformNXT?</h2>
-          <p className="mt-4 text-zinc-600">We combine artificial intelligence and HR domain expertise to provide right-sized solutions for companies of all sizes — from startups to enterprises.</p>
+          <p className="text-xs uppercase tracking-[0.25em] text-blue-600">
+            Solutions
+          </p>
 
-          <ul className="mt-6 space-y-4">
-            <li className="flex gap-3">
-              <div className="flex-shrink-0 bg-blue-50 text-blue-600 rounded-full h-10 w-10 flex items-center justify-center font-bold">1</div>
-              <div>
-                <div className="font-semibold text-zinc-900">Faster hiring</div>
-                <div className="text-zinc-600">Reduce screening time with automated shortlisting and interview automation.</div>
-              </div>
-            </li>
-            <li className="flex gap-3">
-              <div className="flex-shrink-0 bg-blue-50 text-blue-600 rounded-full h-10 w-10 flex items-center justify-center font-bold">2</div>
-              <div>
-                <div className="font-semibold text-zinc-900">Better quality</div>
-                <div className="text-zinc-600">Use objective analytics to improve hiring decisions and reduce bias.</div>
-              </div>
-            </li>
-            <li className="flex gap-3">
-              <div className="flex-shrink-0 bg-blue-50 text-blue-600 rounded-full h-10 w-10 flex items-center justify-center font-bold">3</div>
-              <div>
-                <div className="font-semibold text-zinc-900">Scalable operations</div>
-                <div className="text-zinc-600">From a handful of interviews to thousands, easily scale your processes without adding headcount.</div>
-              </div>
-            </li>
-          </ul>
+          <h1 className="mt-3 text-3xl md:text-4xl font-bold text-zinc-900 leading-tight">
+            Modern AI-powered Solutions for Hiring, HR & Workforce Intelligence
+          </h1>
+
+          <p className="mt-4 text-zinc-700 text-lg">
+            TransformNXT brings together interviewing, analytics, automation, and 
+            talent intelligence—helping HR teams move faster, hire smarter, and 
+            operate with confidence at scale.
+          </p>
+
+          <div className="mt-6 flex flex-wrap gap-4">
+            <Link
+              to="/contact"
+              className="px-6 py-3 rounded-md bg-blue-600 text-white font-medium"
+            >
+              Talk to Solutions Team
+            </Link>
+
+            <Link
+              to="/products/ai-video-interviewer"
+              className="px-6 py-3 rounded-md border border-blue-600 text-blue-600 font-medium"
+            >
+              View Products
+            </Link>
+          </div>
         </div>
 
-        <aside>
-          <div className="bg-white border border-zinc-100 rounded-lg shadow-sm p-6">
-            <h3 className="text-lg font-semibold text-zinc-900">Key Features</h3>
-            <div className="mt-4 space-y-3">
-              {features.map((f, i) => (
-                <div key={f.title} className="border border-zinc-100 rounded-md overflow-hidden">
-                  <button
-                    aria-expanded={openIndex === i}
-                    onClick={() => toggle(i)}
-                    className="w-full text-left px-4 py-3 flex items-center justify-between bg-white hover:bg-zinc-50"
-                  >
-                    <span className="font-medium text-zinc-900">{f.title}</span>
-                    <svg className={`h-5 w-5 text-zinc-500 transform ${openIndex === i ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg>
-                  </button>
-                  <div className={`px-4 pt-0 pb-4 text-zinc-600 transition-all ${openIndex === i ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
-                    <p className="pt-3">{f.body}</p>
-                    <p className="mt-3"><Link to="/contact" className="text-blue-600 hover:underline">Get a demo</Link></p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="mt-6 bg-gradient-to-r from-blue-50 to-white border border-zinc-100 rounded-lg p-6 text-center">
-            <h4 className="font-semibold text-zinc-900">Ready to transform hiring?</h4>
-            <p className="text-zinc-600 mt-2">Talk to our team for a tailored solution and deployment plan.</p>
-            <div className="mt-4 flex justify-center">
-              <Link to="/contact" className="inline-flex items-center px-5 py-3 bg-zinc-900 text-white rounded-md shadow hover:bg-zinc-800">Contact Sales</Link>
-            </div>
-          </div>
-        </aside>
-      </section>
-
-      <section className="mt-12">
-        <h3 className="text-2xl font-bold text-zinc-900">Integrations & Compatibility</h3>
-        <p className="mt-3 text-zinc-600">We support common HR systems, SSO providers and calendar integrations. Our product is built with modern web standards for broad browser compatibility (Chrome, Edge, Firefox, Safari) and responsive behavior across device sizes.</p>
-
-        <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-4">
-          <div className="flex items-center justify-center p-4 bg-white border border-zinc-100 rounded">HRMS</div>
-          <div className="flex items-center justify-center p-4 bg-white border border-zinc-100 rounded">ATS</div>
-          <div className="flex items-center justify-center p-4 bg-white border border-zinc-100 rounded">SSO</div>
-          <div className="flex items-center justify-center p-4 bg-white border border-zinc-100 rounded">Calendar</div>
+        {/* Right Image */}
+        <div className="rounded-2xl overflow-hidden shadow-lg border border-zinc-200">
+          <img
+            src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200"
+            alt="HR Solutions"
+            className="w-full h-full object-cover"
+          />
         </div>
       </section>
 
-      <section className="mt-12">
-        <h3 className="text-2xl font-bold text-zinc-900">Security & Compliance</h3>
-        <p className="mt-3 text-zinc-600">Privacy, security and compliance are core to our platform. We support role-based access control, encryption at rest and in transit, and compliance reporting for common standards.</p>
+      {/* SECTION – What Solutions Cover */}
+      <section className="max-w-6xl mx-auto px-6 py-12">
+        <h2 className="text-2xl md:text-3xl font-bold text-zinc-900">
+          A Connected Suite of Intelligent HR Solutions
+        </h2>
+
+        <p className="mt-3 text-zinc-700 max-w-2xl">
+          From screening to analytics, TransformNXT empowers HR teams with 
+          high-performance tools that reduce effort, enhance accuracy, and 
+          create predictable outcomes.
+        </p>
+
+        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {[
+            {
+              title: "AI Video Assessment",
+              desc: "Evaluate candidates using on-demand video interviews with AI-driven insights.",
+            },
+            {
+              title: "AI Audio Assessment",
+              desc: "Voice analysis, sentiment scoring, and speech intelligence for hiring.",
+            },
+            {
+              title: "Interview Scheduling",
+              desc: "Automated scheduling with reminders, timezone intelligence, and calendar sync.",
+            },
+            {
+              title: "ATS + Resume Ranking",
+              desc: "Automatically rank candidates, shortlist high-fit profiles, and remove bias.",
+            },
+            {
+              title: "Predictive HR Analytics",
+              desc: "Forecast hiring success, performance potential, and workforce movement.",
+            },
+            {
+              title: "HR Reporting & Insights",
+              desc: "Generate actionable reports for leadership, compliance, and planning.",
+            },
+          ].map((item, idx) => (
+            <div
+              key={idx}
+              className="p-6 bg-white border border-zinc-200 rounded-xl shadow-sm hover:shadow-md transition"
+            >
+              <h3 className="text-lg font-semibold text-zinc-900">
+                {item.title}
+              </h3>
+              <p className="text-zinc-700 mt-2 text-sm">{item.desc}</p>
+            </div>
+          ))}
+        </div>
       </section>
-    </div>
+
+      {/* SECTION – Workflow */}
+      <section className="max-w-6xl mx-auto px-6 py-12">
+        <h2 className="text-2xl md:text-3xl font-bold text-zinc-900">
+          How TransformNXT Solutions Fit Into Your Workflow
+        </h2>
+
+        <p className="mt-3 text-zinc-700 max-w-2xl">
+          Every module is designed to integrate seamlessly—no matter your 
+          industries, team size, or hiring volume.
+        </p>
+
+        <div className="mt-10 grid gap-6 md:grid-cols-4">
+          {[
+            {
+              step: "01",
+              title: "Screen",
+              desc: "AI-powered interviews & resume ranking create the first shortlist.",
+            },
+            {
+              step: "02",
+              title: "Evaluate",
+              desc: "Structured scoring, competency insights, and job-fit indicators.",
+            },
+            {
+              step: "03",
+              title: "Schedule",
+              desc: "Automated coordination, reminders & interviewer workflows.",
+            },
+            {
+              step: "04",
+              title: "Decide",
+              desc: "Predictive analytics & insights support final hiring decisions.",
+            },
+          ].map((item) => (
+            <div
+              key={item.step}
+              className="p-6 bg-white border border-zinc-200 rounded-xl shadow-sm"
+            >
+              <div className="text-3xl font-bold text-blue-600">
+                {item.step}
+              </div>
+              <h3 className="mt-3 text-lg font-semibold text-zinc-900">
+                {item.title}
+              </h3>
+              <p className="mt-2 text-sm text-zinc-700">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* SECTION – Industries we support */}
+      <section className="max-w-6xl mx-auto px-6 py-12">
+        <h2 className="text-2xl md:text-3xl font-bold text-zinc-900">
+          Trusted Across Multiple Industries
+        </h2>
+
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {[
+            "Staffing Agencies",
+            "Corporate Hiring Teams",
+            "Universities & Colleges",
+            "Training Institutes",
+            "BPOs & Operations Teams",
+            "IT & Technology Companies",
+          ].map((sector, idx) => (
+            <div
+              key={idx}
+              className="p-6 rounded-xl bg-white border border-zinc-200 shadow-sm"
+            >
+              <h3 className="font-semibold text-zinc-900">{sector}</h3>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* SECTION – Security */}
+      <section className="max-w-6xl mx-auto px-6 py-12">
+        <h2 className="text-2xl md:text-3xl font-bold text-zinc-900">
+          Enterprise-Grade Security
+        </h2>
+        <p className="mt-3 text-zinc-700 max-w-2xl">
+          With RBAC, encrypted data flow, audit logs, and controlled access, 
+          TransformNXT ensures your infrastructure stays secure and compliant.
+        </p>
+      </section>
+
+      {/* CTA */}
+      <section className="max-w-6xl mx-auto px-6 py-16 text-center">
+        <h2 className="text-2xl md:text-3xl font-bold text-zinc-900">
+          Ready to explore the right solution for your team?
+        </h2>
+
+        <p className="text-zinc-700 mt-3 max-w-xl mx-auto">
+          Our experts will help you tailor the TransformNXT suite to match 
+          your organisation’s goals.
+        </p>
+
+        <Link
+          to="/contact"
+          className="mt-6 inline-flex px-8 py-3 rounded-md bg-blue-600 text-white text-lg font-medium"
+        >
+          Contact Us
+        </Link>
+      </section>
+    </PageContainer>
   );
 }

@@ -128,14 +128,13 @@ export default function Contact() {
           <aside className="space-y-6 animate-fade-in-up animate-fade-in-up-delay-1">
             <div className="bg-white rounded-xl p-6 shadow-lg">
               <h3 className="text-xl font-semibold mb-3">Contact information</h3>
-              <p className="text-gray-700 mb-3">Digi Transformnxt Pvt Ltd<br />No 6/1451 KK Nagar 2nd Street, KR Palayam<br />Erode 638316, Tamilnadu</p>
+              <p className="text-gray-700 mb-3">Transformnxt Pvt Ltd<br />No 6/1451 KK Nagar 2nd Street, KR Palayam<br />Erode 638316, Tamilnadu</p>
               <p className="text-gray-700"><strong>Email:</strong> <a href="mailto:akhil@transformnxt.in" className="underline">akhil@transformnxt.in</a></p>
               <p className="text-gray-700"><strong>Phone:</strong> <a href="tel:000000000" className="underline">000000000</a></p>
             </div>
 
             <div className="bg-white rounded-xl p-6 shadow-lg">
               <h3 className="text-xl font-semibold mb-3">Corporate details</h3>
-              <p className="text-gray-700 mb-2"><strong>CIN:</strong> U70200TN2025PTC183135</p>
               <p className="text-gray-700 mb-2"><strong>Office hours:</strong> Mon–Fri, 9:00am–6:00pm IST</p>
               <p className="text-gray-700"><strong>Response time:</strong> Typical reply within 1 business day</p>
             </div>
